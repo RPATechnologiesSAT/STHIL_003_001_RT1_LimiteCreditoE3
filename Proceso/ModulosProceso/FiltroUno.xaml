@@ -445,7 +445,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,110" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;¿Envío de correo? Definir usuarios&quot;]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,110" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;¿Envío de correo? Definir usuarios y click en liberar&quot;]" />
                 </Sequence>
               </Sequence>
             </ActivityAction>
