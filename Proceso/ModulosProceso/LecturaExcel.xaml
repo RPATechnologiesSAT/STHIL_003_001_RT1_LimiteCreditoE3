@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1224,837</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,1281</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LecturaExcel_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -46,6 +46,7 @@
       <x:String>System.Reflection</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -106,9 +107,10 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LecturaExcel" sap:VirtualizedContainerService.HintSize="512,551" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LecturaExcel" sap:VirtualizedContainerService.HintSize="512,1216" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Incidencias" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientesIncidencias" />
@@ -118,7 +120,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_TipoFiltro = 1]" sap:VirtualizedContainerService.HintSize="450,463" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_TipoFiltro = 1]" sap:VirtualizedContainerService.HintSize="450,472" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,199" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -137,6 +139,52 @@
       </If.Then>
       <If.Else>
         <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <If Condition="[in_TipoFiltro = 3]" sap:VirtualizedContainerService.HintSize="450,656" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,392" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadRange AddHeaders="True" DataTable="[out_dt_ClientesIncidencias]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="[in_SheetCT]" WorkbookPath="Data\Clientes con incidencias LC.xlsx">
+            <ui:ReadRange.Range>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" Value="" />
+              </InArgument>
+            </ui:ReadRange.Range>
+          </ui:ReadRange>
+          <ui:FilterDataTable DataTable="[out_dt_ClientesIncidencias]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="354,184" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_dt_ClientesIncidencias]" SelectColumnsMode="Remove">
+            <ui:FilterDataTable.Filters>
+              <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTEQ">
+                  <ui:FilterOperationArgument.Column>
+                    <InArgument x:TypeArguments="x:String">["Status"]</InArgument>
+                  </ui:FilterOperationArgument.Column>
+                  <ui:FilterOperationArgument.Operand>
+                    <InArgument x:TypeArguments="x:String">["Liberar con límite"]</InArgument>
+                  </ui:FilterOperationArgument.Operand>
+                </ui:FilterOperationArgument>
+              </scg:List>
+            </ui:FilterDataTable.Filters>
+            <ui:FilterDataTable.SelectColumns>
+              <scg:List x:TypeArguments="InArgument" Capacity="4">
+                <x:Null />
+              </scg:List>
+            </ui:FilterDataTable.SelectColumns>
+          </ui:FilterDataTable>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

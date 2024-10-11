@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1497,2047</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,2047</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -181,12 +181,12 @@
                           </ui:InvokeWorkflowFile>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Proceso\ModulosProceso\FiltroDos.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Proceso\ModulosProceso\FiltroDos.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Country" />
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Country">[CurrentRow("layout").ToString]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Proceso\ModulosProceso\FiltroTres.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Proceso\ModulosProceso\FiltroTres.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Country" />
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Country">[CurrentRow("layout").ToString]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="in_ImporteLimite">100</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>

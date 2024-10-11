@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1497,4233</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,4343</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FiltroUno_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,7 +115,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Filtro - Excluir toda la lista hasta 10000" sap:VirtualizedContainerService.HintSize="1342,4088" sap2010:WorkflowViewState.IdRef="Sequence_15">
+  <Sequence DisplayName="Filtro - Excluir toda la lista hasta 10000" sap:VirtualizedContainerService.HintSize="1342,4278" sap2010:WorkflowViewState.IdRef="Sequence_15">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="textToCopy" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientesIncidencias" />
@@ -126,15 +126,15 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1280,4000" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1280,4190" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="1242,3749" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="1242,3939" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V2" WindowResize="Maximize">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1208,3458" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1208,3648" sap2010:WorkflowViewState.IdRef="Sequence_16">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="FilePath" />
                 </Sequence.Variables>
@@ -441,14 +441,25 @@
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FilePath">[FilePath]</OutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <Sequence sap:VirtualizedContainerService.HintSize="1146,225" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                <Sequence sap:VirtualizedContainerService.HintSize="1146,415" sap2010:WorkflowViewState.IdRef="Sequence_17">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,110" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;¿Envío de correo? Definir usuarios y click en liberar&quot;]" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,300" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,196" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;¿Envío de correo? Definir usuarios y click en liberar&quot;]" />
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
                 </Sequence>
               </Sequence>
             </ActivityAction>
