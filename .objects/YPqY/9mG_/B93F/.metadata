@@ -1,0 +1,13 @@
+﻿{
+  "Name": "P10(1)200 Especificar valores p.criterios fil",
+  "Type": "Screen",
+  "Id": "B93FpxF3yUCcNG_WFuD3NQ",
+  "Reference": "TmPdEOoPdEO_2-PlKrUvcg/B93FpxF3yUCcNG_WFuD3NQ",
+  "ParentRef": "TmPdEOoPdEO_2-PlKrUvcg/9mG_6x6sp0GRRffVgEZp2g",
+  "Created": "2024-10-15T08:49:30.6325741Z",
+  "Updated": "2024-10-15T08:49:30.6325741Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

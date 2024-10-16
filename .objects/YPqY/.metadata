@@ -1,0 +1,12 @@
+﻿{
+  "Name": "P10(1)200 Especificar valores p.criterios filtros",
+  "Type": "App",
+  "Id": "YPqYOtCIiUWUnnW-z3FLNA",
+  "Reference": "TmPdEOoPdEO_2-PlKrUvcg/YPqYOtCIiUWUnnW-z3FLNA",
+  "Created": "2024-10-15T08:49:30.534102Z",
+  "Updated": "2024-10-15T08:49:30.534102Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
