@@ -281,7 +281,7 @@
                               </scg:List>
                             </ui:MultipleAssign.AssignOperations>
                           </ui:MultipleAssign>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Text="[in_country + &quot;-&quot; + PathName]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Text="[PathName]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable CVScreenId="2db77713-29e2-4d3b-97d9-9b1e0be7a217" CvTextArea="129, 72, 58, 13" CvTextArgument="C:\\TEMP" CvType="Text" DesignTimeRectangle="127, 67, 476, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" Guid="86981dd6-c764-4cd9-a08e-bd27a8ab9e6e" InformativeScreenshot="d7e42daf7639c6aa8d176ec067b378cd.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Grabar fichero' idx='*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -292,7 +292,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Text="[FileName]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Text="[in_country + &quot;-&quot; + FileName]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable CVScreenId="2db77713-29e2-4d3b-97d9-9b1e0be7a217" CvElementArea="126, 96, 463, 27" CvType="InputBox" DesignTimeRectangle="126, 96, 463, 27" DesignTimeScaleFactor="1" ElementType="InputBox" Guid="ef510cfe-ceb3-4c62-a6e2-298aada0680b" InformativeScreenshot="c3d749d46cbb1734537d57d02e5f4e2a.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Grabar fichero' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>

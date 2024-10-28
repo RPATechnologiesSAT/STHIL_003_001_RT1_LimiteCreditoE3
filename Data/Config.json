@@ -19,20 +19,31 @@
             "Name": "DebugMode",
             "Value": "True",
             "Description": "Booleano en tipo string para realizar o evitar ciertas acciones segun el modo de ejecución. Por defecto, en true, no se ejecutará el cleaning Desktop."
-        }
-    ],
-
-    "Assets": [
-        {
-            "Name": "NombreAssetEnOrquestador",
-            "Description": "Descripcion del Asset"
-        }
-    ],
- 
-    "Credentials": [
-        {
-            "Name": "NombreCredencialEnOrquestador",
-            "OrchestratorFolder": "Shared"
-        }
+        },
+		{
+			"Name": "DestinatarioSPUno",
+            "Value": "inaki.altamira@stihl.es",
+            "Description": "Correo destinatario filtro 1 SP."
+		},
+		{
+			"Name": "DestinatarioDos",
+            "Value": "ana.sanchez@stihl.es",
+            "Description": "Correo destinatario filtro 2."
+		},
+		{
+			"Name": "DestinatarioSPTres",
+            "Value": "bernd.hullerum@stihl.es",
+            "Description": "Correo destinatario filtro 2 SP."
+		},
+		{
+			"Name": "DestinatarioPTUno",
+            "Value": "patricia.alves@stihl.pt",
+            "Description": "Correo destinatario filtro 1 PT."
+		},
+		{
+			"Name": "DestinatarioPTTres",
+            "Value": "juvenal.martins@stihl.pt",
+            "Description": "Correo destinatario filtro 3 PT."
+		}
     ]
 }
