@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1793,1281</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,1454</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LecturaExcel_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,7 +111,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LecturaExcel" sap:VirtualizedContainerService.HintSize="512,1216" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LecturaExcel" sap:VirtualizedContainerService.HintSize="512,1389" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Incidencias" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientesIncidencias" />
@@ -148,7 +148,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[in_TipoFiltro = 3]" sap:VirtualizedContainerService.HintSize="450,656" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[in_TipoFiltro = 3]" sap:VirtualizedContainerService.HintSize="450,665" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,392" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
@@ -194,5 +194,6 @@
         </Sequence>
       </If.Else>
     </If>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Finalizada secuencia lectura Excel&quot;]" />
   </Sequence>
 </Activity>

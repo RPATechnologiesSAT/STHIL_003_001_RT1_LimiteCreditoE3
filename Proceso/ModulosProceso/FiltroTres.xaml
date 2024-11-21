@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2322,6448</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2322,9236</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FiltroTres_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -55,6 +55,7 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.Core.Activities.SAP</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -119,7 +120,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="2332,6383" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence sap:VirtualizedContainerService.HintSize="2332,9171" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="textToCopy" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientesIncidencias" />
@@ -129,40 +130,41 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="FiltroTres" sap:VirtualizedContainerService.HintSize="2270,6295" sap2010:WorkflowViewState.IdRef="Sequence_21">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2270,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;----- Comienzo secuencia FiltroTres -----&quot;]" />
+    <Sequence DisplayName="FiltroTres" sap:VirtualizedContainerService.HintSize="2270,8746" sap2010:WorkflowViewState.IdRef="Sequence_21">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2208,6184" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2208,8626" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <TryCatch.Try>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="2170,5932" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="2170,8375" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2136,5641" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2136,8044" sap2010:WorkflowViewState.IdRef="Sequence_16">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Filtros - liberar status = Liberar con limite | importe mx 100" sap:VirtualizedContainerService.HintSize="2074,5551" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <Sequence DisplayName="Filtros - liberar status = Liberar con limite | importe mx 100" sap:VirtualizedContainerService.HintSize="2074,7954" sap2010:WorkflowViewState.IdRef="Sequence_15">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="2012,5436" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="b7df7767-82a3-435b-bd02-ab46dcf814f9" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="2012,7839" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="b7df7767-82a3-435b-bd02-ab46dcf814f9" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1978,5080" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1978,7523" sap2010:WorkflowViewState.IdRef="Sequence_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -173,27 +175,30 @@
                                 <uix:TargetAnchorable DesignTimeRectangle="968, 588, 43, 21" DesignTimeScaleFactor="1" Guid="f38c5c34-9e7e-4bbb-94e0-446f01d08cc7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAVCAYAAADfLRcdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFNSURBVEhL1ZdPSsNAFIdn6dIbFNy49AQuegdB3IvgSlyKR+gVXAhuVISA2FWRUkRREUERBKGLIijiAQQtPvliRkvN/Im+dvCDIZOE+b0vwyMkpnXZk9rijuyf9eTltS9aTMxtFrO/gVPz4l6ml/fE1Nebuag2WrKWw6sHMZMLW6o7atGWxdFoh1pGkftD9vzuOS9UZUwt7Rarv+G6Nk5ZjjGsbpymkwUrHKKRXZeKwthkYfuo6y0Yuj9WWXDtXEyrlOWSR9vEUFbXKwuEz64dFGefhETBlUtWSJi1PNgwQVmYb7S/Fg/OffhyfcIuUYiWteEUol9DhHLLhH2ikEwWBoVDopBUFsiLEYVKsgS63qvDxMpWIVoWSXYhlqSyjCokk/0NI5H9L9+zb/13MfQhvw3aaMse3z6JyU66+f9N5+Yxt9dCSxYnRGdWMvkAdlA+MPKmeAcAAAAASUVORK5CYII=" InformativeScreenshot="6196012a0c08d5e1f825002304da4941.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive" />
                               </uix:NClick.Target>
                             </uix:NClick>
-                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="P10(1)200 Especificar valores p.criterios fil" sap:VirtualizedContainerService.HintSize="1916,4801" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V2">
+                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="P10(1)200 Especificar valores p.criterios fil" sap:VirtualizedContainerService.HintSize="1916,7244" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V2">
                               <uix:NApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1882,4485" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1882,6928" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Filtro'" sap:VirtualizedContainerService.HintSize="1820,4395" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
+                                    <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Filtro'" sap:VirtualizedContainerService.HintSize="1820,6838" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
                                       <uix:NCheckState.IfExists>
-                                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1316,4153" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1316,6596" sap2010:WorkflowViewState.IdRef="Sequence_2">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1254,4063" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1254,6506" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="sd:DataTable" Name="dt_Empty" />
+                                            </Sequence.Variables>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -224,6 +229,7 @@
                                                 </InArgument>
                                               </uix:NTypeInto.Text>
                                             </uix:NTypeInto>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1192,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Filtros aplicados correctamente&quot;]" />
                                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Proceso\ModulosProceso\LecturaExcel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="1192,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Proceso\ModulosProceso\LecturaExcel.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
                                                 <InArgument x:TypeArguments="x:String" x:Key="in_SheetCT">[if(in_Country.Contains("ES"),"ES","PT")]</InArgument>
@@ -253,15 +259,15 @@
                                                 <ActivityFunc x:TypeArguments="x:Boolean" />
                                               </ui:RetryScope.Condition>
                                             </ui:RetryScope>
-                                            <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Selección'" sap:VirtualizedContainerService.HintSize="1192,2165" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
+                                            <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Selección'" sap:VirtualizedContainerService.HintSize="1192,2113" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
                                               <uix:NCheckState.IfExists>
-                                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="688,1874" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="688,1864" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'Toolbar  tbar[0]'" sap:VirtualizedContainerService.HintSize="626,193" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Borrar selec.(todo)   (Shift+F4)">
+                                                  <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'Toolbar  tbar[0]'" sap:VirtualizedContainerService.HintSize="626,192" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Borrar selec.(todo)   (Shift+F4)">
                                                     <ucas:SelectMenuItem.Items>
                                                       <scg:List x:TypeArguments="x:String" Capacity="16">
                                                         <x:String xml:space="preserve">Verificar entradas   (Intro)</x:String>
@@ -288,32 +294,32 @@
                                                       </ui:Target>
                                                     </ucas:SelectMenuItem.Target>
                                                   </ucas:SelectMenuItem>
-                                                  <If Condition="[dt_ClientesIncidencias.Rows.Count &lt;&gt; 0]" sap:VirtualizedContainerService.HintSize="626,1218" sap2010:WorkflowViewState.IdRef="If_1">
+                                                  <If Condition="[dt_ClientesIncidencias.Rows.Count &lt;&gt; 0]" sap:VirtualizedContainerService.HintSize="626,1211" sap2010:WorkflowViewState.IdRef="If_1">
                                                     <If.Then>
-                                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,943" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,938" sap2010:WorkflowViewState.IdRef="Sequence_27">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Excluir valores indiv.'" sap:VirtualizedContainerService.HintSize="530,190" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
+                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Excluir valores indiv.'" sap:VirtualizedContainerService.HintSize="530,189" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
                                                           <uix:NClick.Target>
                                                             <uix:TargetAnchorable DesignTimeRectangle="381, 96, 135, 28" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;sap id='usr/tabsTAB_STRIP/tabpNOSV' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAB_STRIP/tabpNOSV' check:text='Excluir valores indiv.' /&gt;" Guid="3894b0e0-884c-4b64-96e6-9d03f5eced8b" InformativeScreenshot="d7c03978467c2d90cc8381122994519a.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Selección múltiple para Socio comercial' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                                                           </uix:NClick.Target>
                                                         </uix:NClick>
-                                                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ClientesIncidencias]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,392" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ClientesIncidencias]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,389" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                                           <ui:ForEachRow.Body>
                                                             <ActivityAction x:TypeArguments="sd:DataRow">
                                                               <ActivityAction.Argument>
                                                                 <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                                               </ActivityAction.Argument>
-                                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_25">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                                                <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
                                                                   <Assign.To>
                                                                     <OutArgument x:TypeArguments="x:String">[textToCopy]</OutArgument>
                                                                   </Assign.To>
@@ -332,7 +338,7 @@
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:ForEachRow>
                                                         <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="SetToClipboard_2" Text="[textToCopy.Trim]" />
-                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Upload'" sap:VirtualizedContainerService.HintSize="530,181" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
+                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Upload'" sap:VirtualizedContainerService.HintSize="530,180" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
                                                           <uix:NClick.Target>
                                                             <uix:TargetAnchorable DesignTimeRectangle="811, 505, 23, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[24]' tooltip='Upload del portapapeles   (Shift+F12)' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[24]' tooltip='Upload del portapapeles   (Shift+F12)' /&gt;" Guid="8674e9a8-7cc5-4330-8d70-30edc138301c" InformativeScreenshot="a7c2663458ed3e54f2dd848b342dfc93.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Selección múltiple para Socio comercial' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                                           </uix:NClick.Target>
@@ -340,7 +346,7 @@
                                                       </Sequence>
                                                     </If.Then>
                                                     <If.Else>
-                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -349,12 +355,12 @@
                                                       </Sequence>
                                                     </If.Else>
                                                   </If>
-                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Tomar (F8)'" sap:VirtualizedContainerService.HintSize="626,190" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
+                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Tomar (F8)'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
                                                     <uix:NClick.Target>
                                                       <uix:TargetAnchorable DesignTimeRectangle="601, 505, 23, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[8]' tooltip='Tomar   (F8)' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[8]' tooltip='Tomar   (F8)' /&gt;" Guid="548f61f6-c1c1-4bd9-a394-e2d75de70be6" InformativeScreenshot="b91f549034babf9fdfb67c1c1bdb8434.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Selección múltiple para Socio comercial' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                                     </uix:NClick.Target>
                                                   </uix:NClick>
-                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Ejecutar (Intro)'" sap:VirtualizedContainerService.HintSize="626,183" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
+                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Ejecutar (Intro)'" sap:VirtualizedContainerService.HintSize="626,182" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
                                                     <uix:NClick.Target>
                                                       <uix:TargetAnchorable DesignTimeRectangle="925, 534, 23, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' tooltip='Ejecutar   (Intro)' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' tooltip='Ejecutar   (Intro)' /&gt;" Guid="fd010527-1320-4462-aeba-8f5bee420d61" InformativeScreenshot="3b99878a37506252ac262ee1cd0c8574.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Especificar valores p.criterios filtros' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                                     </uix:NClick.Target>
@@ -362,28 +368,247 @@
                                                 </Sequence>
                                               </uix:NCheckState.IfExists>
                                               <uix:NCheckState.IfNotExists>
-                                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,206" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Throw Exception="[new SystemException(&quot;Error al abrir la selección de clientes&quot;)]" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                                                  <Throw Exception="[new SystemException(&quot;Error al abrir la selección de clientes&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_6" />
                                                 </Sequence>
                                               </uix:NCheckState.IfNotExists>
                                               <uix:NCheckState.Target>
                                                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 872, 536" DesignTimeScaleFactor="1" Guid="26030c94-eebc-44a8-a729-17c054d96e9e" InformativeScreenshot="f19c09ffff77bb128757fa9b51d8c83a.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Selección múltiple para Socio comercial' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
                                               </uix:NCheckState.Target>
                                             </uix:NCheckState>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="1192,226" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,111" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Click en liberar&quot;]" />
-                                            </Sequence>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1192,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Excluyendo valores individuales.&quot;]" />
+                                            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_Empty]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Socio comercial' ReferenceIdx='0' Name='Socio comercial'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Descripción' ReferenceIdx='1' Name='Descripción'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Número de documento con bloqueo de crédito' ReferenceIdx='2' Name='Número de documento con bloqueo de crédito'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Referencia ext.' ReferenceIdx='3' Name='Referencia ext.'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Valor de crédito pendiente' ReferenceIdx='4' Name='Valor de crédito pendiente'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Moneda del importe por autorizar' ReferenceIdx='5' Name='Moneda del importe por autorizar'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Límite de crédito' ReferenceIdx='6' Name='Límite de crédito'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Moneda' ReferenceIdx='7' Name='Moneda'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Denom.status documento' ReferenceIdx='8' Name='Denom.status documento'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Open Invoices' ReferenceIdx='9' Name='Open Invoices'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Open Orders' ReferenceIdx='10' Name='Open Orders'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Clase de riesgo' ReferenceIdx='11' Name='Clase de riesgo'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Compr.horiz.crédito' ReferenceIdx='12' Name='Compr.horiz.crédito'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Agotamiento %' ReferenceIdx='13' Name='Agotamiento %'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Creado el' ReferenceIdx='14' Name='Creado el'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Abreviatura de responsable' ReferenceIdx='15' Name='Abreviatura de responsable'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Liberación/Cancelación por' ReferenceIdx='16' Name='Liberación/Cancelación por'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Verif.dinámica de agotamiento límite crédito' ReferenceIdx='17' Name='Verif.dinámica de agotamiento límite crédito'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Verificación valor documento máx.' ReferenceIdx='18' Name='Verificación valor documento máx.'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Verificación niv.reclamación máx.' ReferenceIdx='19' Name='Verificación niv.reclamación máx.'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Verif.partidas abiertas más antiguas' ReferenceIdx='20' Name='Verif.partidas abiertas más antiguas'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Partidas abiertas atrasadas' ReferenceIdx='21' Name='Partidas abiertas atrasadas'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Liberación/Rechazo por' ReferenceIdx='22' Name='Liberación/Rechazo por'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='0-30 Días' ReferenceIdx='23' Name='0-30 Días'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='31-60 Días' ReferenceIdx='24' Name='31-60 Días'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='61-90 Días' ReferenceIdx='25' Name='61-90 Días'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Sobr 90 Días' ReferenceIdx='26' Name='Sobr 90 Días'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Grp.créditos cliente' ReferenceIdx='27' Name='Grp.créditos cliente'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Analista de créditos' ReferenceIdx='28' Name='Analista de créditos'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Condición de pedido' ReferenceIdx='29' Name='Condición de pedido'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Condición expedición' ReferenceIdx='30' Name='Condición expedición'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Customer Credit Texts' ReferenceIdx='31' Name='Customer Credit Texts'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Delivery Value' ReferenceIdx='32' Name='Delivery Value'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Billing Document Value' ReferenceIdx='33' Name='Billing Document Value'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="1192,189" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
+                                              <uix:NExtractData.Target>
+                                                <uix:TargetAnchorable DesignTimeRectangle="644, 556, 1464, 357" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[1]/shell' /&gt;" Guid="1cecac9e-1b82-4653-b5f0-9c7f72748f7c" InformativeScreenshot="0e67e108e7dbab1828cab5fd41acfc94.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                              </uix:NExtractData.Target>
+                                            </uix:NExtractData>
+                                            <If Condition="[dt_Empty.Rows.Count = 0]" sap:VirtualizedContainerService.HintSize="1192,2182" sap2010:WorkflowViewState.IdRef="If_2">
+                                              <If.Then>
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;No se liberó la fase 3 al no tener datos en la tabla&quot;]" />
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1016,1765" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Sequence DisplayName="Sequence - Liberar" sap:VirtualizedContainerService.HintSize="954,1072" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="458,952" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="5" RetryInterval="00:00:05">
+                                                      <ui:RetryScope.ActivityBody>
+                                                        <ActivityAction>
+                                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,754" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Haciendo click en liberar...&quot;]" />
+                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'GridViewAllItems Selecc…'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
+                                                              <uix:NClick.Target>
+                                                                <uix:TargetAnchorable DesignTimeRectangle="646, 621, 25, 29" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[1]/shell' tableCol='-1' tableRow='-1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[1]/shell' /&gt;" Guid="4867a61b-11a9-45c3-8035-058fb6f04228" InformativeScreenshot="ceac4dfb20a830aad4b4cb7331c01fb2.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                                              </uix:NClick.Target>
+                                                            </uix:NClick>
+                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Liberar'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
+                                                              <uix:NClick.Target>
+                                                                <uix:TargetAnchorable CVScreenId="04f6ddd7-f4a1-4742-b5a2-35f956742382" CvElementArea="975, 586, 65, 25" CvTextArea="997, 592, 38, 11" CvTextArgument="*Liberar*" CvType="Button" DesignTimeRectangle="975, 586, 65, 25" DesignTimeScaleFactor="1" ElementType="Button" Guid="89c05ae2-4267-414d-8a25-6e58993649cf" ImageBase64="" InformativeScreenshot="e0341d3f7d7f33054c61a746f3682687.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                                                                  <uix:TargetAnchorable.Anchors>
+                                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                      <uix:Target CVScreenId="bcd6f0c7-be4a-4dae-98a0-2e28042eaf56" CvElementArea="896, 586, 74, 26" CvTextArea="918, 592, 48, 11" CvTextArgument="Verificar" CvType="Button" DesignTimeRectangle="896, 585, 74, 26" ElementType="Button" Guid="165b780b-212b-4971-a028-5640c9276ff3" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                                                    </scg:List>
+                                                                  </uix:TargetAnchorable.Anchors>
+                                                                </uix:TargetAnchorable>
+                                                              </uix:NClick.Target>
+                                                            </uix:NClick>
+                                                            <Delay Duration="00:05:00" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                                          </Sequence>
+                                                        </ActivityAction>
+                                                      </ui:RetryScope.ActivityBody>
+                                                      <ui:RetryScope.Condition>
+                                                        <ActivityFunc x:TypeArguments="x:Boolean" />
+                                                      </ui:RetryScope.Condition>
+                                                    </ui:RetryScope>
+                                                  </Sequence>
+                                                  <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Visualizar'" sap:VirtualizedContainerService.HintSize="954,557" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
+                                                    <uix:NCheckState.IfExists>
+                                                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,308" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Continuar (Intro)'" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0940a908-774f-4b23-be23-1c45bfbd9834" Version="V3">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable DesignTimeRectangle="601, 331, 23, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="db21e554-98b5-4afc-a04b-38fa51226318" InformativeScreenshot="201934694566a9b8b6f602c79fb6e306.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Visualizar logs' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                                          </uix:NClick.Target>
+                                                          <uix:NClick.VerifyOptions>
+                                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                              <uix:VerifyExecutionOptions.Retry>
+                                                                <InArgument x:TypeArguments="x:Boolean" />
+                                                              </uix:VerifyExecutionOptions.Retry>
+                                                              <uix:VerifyExecutionOptions.Timeout>
+                                                                <InArgument x:TypeArguments="x:Double" />
+                                                              </uix:VerifyExecutionOptions.Timeout>
+                                                            </uix:VerifyExecutionOptions>
+                                                          </uix:NClick.VerifyOptions>
+                                                        </uix:NClick>
+                                                      </Sequence>
+                                                    </uix:NCheckState.IfExists>
+                                                    <uix:NCheckState.IfNotExists>
+                                                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </uix:NCheckState.IfNotExists>
+                                                    <uix:NCheckState.Target>
+                                                      <uix:TargetAnchorable DesignTimeRectangle="0, 0, 863, 362" DesignTimeScaleFactor="1" Guid="201af17c-1d77-49bf-a276-f46e0f08d475" InformativeScreenshot="57a40ab6fab8d774ac13879e486f8450.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Visualizar logs' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.FuzzySelectorArgument>
+                                                          <InArgument x:TypeArguments="x:String">
+                                                            <Literal x:TypeArguments="x:String" Value="" />
+                                                          </InArgument>
+                                                        </uix:TargetAnchorable.FuzzySelectorArgument>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NCheckState.Target>
+                                                  </uix:NCheckState>
+                                                  <Sequence DisplayName="Sequence - Aceptar liberar" sap:VirtualizedContainerService.HintSize="954,48" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: P10(1)/200 Consulta seguridad" sap:VirtualizedContainerService.HintSize="1050,1051" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" OpenMode="Never" ScopeGuid="b8bb1b7b-5daa-4150-ad4c-ba95d40784be" Version="V2">
+                                                      <uix:NApplicationCard.Body>
+                                                        <ActivityAction x:TypeArguments="x:Object">
+                                                          <ActivityAction.Argument>
+                                                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                                          </ActivityAction.Argument>
+                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,737" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Consulta'" sap:VirtualizedContainerService.HintSize="954,597" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="b8bb1b7b-5daa-4150-ad4c-ba95d40784be" Version="V3">
+                                                              <uix:NCheckState.IfExists>
+                                                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,308" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sí'" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b8bb1b7b-5daa-4150-ad4c-ba95d40784be" Version="V3">
+                                                                    <uix:NClick.Target>
+                                                                      <uix:TargetAnchorable DesignTimeRectangle="64, 211, 134, 27" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='usr/btnBUTTON_1' text=' S*' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/btnBUTTON_1' text=' S*' check:text='Sí' /&gt;" Guid="c2ebc053-3e9b-41ea-a601-8c72975c961f" InformativeScreenshot="fa6aa4d0e1accdcfd816d7109f449dd3.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Consulta seguridad' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                                                    </uix:NClick.Target>
+                                                                    <uix:NClick.VerifyOptions>
+                                                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                        <uix:VerifyExecutionOptions.Retry>
+                                                                          <InArgument x:TypeArguments="x:Boolean" />
+                                                                        </uix:VerifyExecutionOptions.Retry>
+                                                                        <uix:VerifyExecutionOptions.Timeout>
+                                                                          <InArgument x:TypeArguments="x:Double" />
+                                                                        </uix:VerifyExecutionOptions.Timeout>
+                                                                      </uix:VerifyExecutionOptions>
+                                                                    </uix:NClick.VerifyOptions>
+                                                                  </uix:NClick>
+                                                                </Sequence>
+                                                              </uix:NCheckState.IfExists>
+                                                              <uix:NCheckState.IfNotExists>
+                                                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                </Sequence>
+                                                              </uix:NCheckState.IfNotExists>
+                                                              <uix:NCheckState.Target>
+                                                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 620, 268" DesignTimeScaleFactor="1" Guid="b3e153af-a653-48f7-b0d7-8611b6e475da" InformativeScreenshot="c02b8c589a5fd78d72e264dda326fceb.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Consulta seguridad' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                                                              </uix:NCheckState.Target>
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                            </uix:NCheckState>
+                                                            <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Visualizar'" sap:VirtualizedContainerService.HintSize="954,50" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="b8bb1b7b-5daa-4150-ad4c-ba95d40784be" Version="V3">
+                                                              <uix:NCheckState.IfExists>
+                                                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,308" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Continuar (Intro)'" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b8bb1b7b-5daa-4150-ad4c-ba95d40784be" Version="V3">
+                                                                    <uix:NClick.Target>
+                                                                      <uix:TargetAnchorable DesignTimeRectangle="601, 418, 23, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="76b7eb04-eb01-4c30-9031-5e0c8787d255" InformativeScreenshot="2663f00031a2454b24c32c9bb230c849.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Visualizar logs' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                                                    </uix:NClick.Target>
+                                                                    <uix:NClick.VerifyOptions>
+                                                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                        <uix:VerifyExecutionOptions.Retry>
+                                                                          <InArgument x:TypeArguments="x:Boolean" />
+                                                                        </uix:VerifyExecutionOptions.Retry>
+                                                                        <uix:VerifyExecutionOptions.Timeout>
+                                                                          <InArgument x:TypeArguments="x:Double" />
+                                                                        </uix:VerifyExecutionOptions.Timeout>
+                                                                      </uix:VerifyExecutionOptions>
+                                                                    </uix:NClick.VerifyOptions>
+                                                                  </uix:NClick>
+                                                                </Sequence>
+                                                              </uix:NCheckState.IfExists>
+                                                              <uix:NCheckState.IfNotExists>
+                                                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                </Sequence>
+                                                              </uix:NCheckState.IfNotExists>
+                                                              <uix:NCheckState.Target>
+                                                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 863, 449" DesignTimeScaleFactor="1" ElementType="Container" Guid="ba92d79f-b0bc-444b-bf67-abfa465085ce" InformativeScreenshot="84b0c49feb6ef372edffbbf6a25ba14b.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' title='P10(1)/200 Visualizar logs' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                                              </uix:NCheckState.Target>
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                            </uix:NCheckState>
+                                                          </Sequence>
+                                                        </ActivityAction>
+                                                      </uix:NApplicationCard.Body>
+                                                      <uix:NApplicationCard.TargetApp>
+                                                        <uix:TargetApp Area="410, 331, 620, 268" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG8SURBVFhH7ZPNS8JgHMd3jk7SeQbZIcyyrpX9H9FVQi081inFKPAlzQgLRCPCZEpEnYKKlKLEl14Nj73NIgXrUkd/7XHPbFLWpqGXfeCLDIaf7/PdRkhISDSdt3CrjElbk9JC7K6Ppie9TrqRmfY66Kvg8HkhLFMSbp8lTzrPoFHpcCXB4TM9Poe6BkqPoJEFFIzc5jPnsiElK0c0qoDClUDyp1uqX4PVLFwBuTMF2mAa9MFL0G9csAniiLjWMb8a1xGQjjhPXpqdZmYfxNovuALt83HIv35AvUSSGVBPBYC0xcpy5uQvNKX6mp1PuQDTOFeovUCxWIRI4gaUEx4gZyOMPAWd5dn7hrDuO5UF3vHfiQPJ92LXoBpfxHL25PZqs/P5jwKH8TSoDG4gLfulk3OzP1A9v8sRFQVEvgPo5Eiu1C2AfOagPLvdZ87eUerqs/PhCsgdCdD6o2BY3gG9Z1tQxpa2oNu4AiSWs7Ob/56dD1egFOspkHNR5jkKDLrXelIx+z3VK1yOqChQY/DstGg5ot4CePasqNn51FOAm13wC/cTx4GRqH/VlKklm2vGpKBPTUJCQqIqBPEJehJ6L6S9cUMAAAAASUVORK5CYII=" InformativeScreenshot="a18dd93bc945d3b943104c499476ff67.png" Selector="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Consulta seguridad' idx='*' /&gt;" Title="P10(1)/200 Consulta seguridad" />
+                                                      </uix:NApplicationCard.TargetApp>
+                                                    </uix:NApplicationCard>
+                                                  </Sequence>
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
                                           </Sequence>
                                         </Sequence>
                                       </uix:NCheckState.IfExists>
@@ -437,7 +662,7 @@
           </uix:NApplicationCard>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="2174,23" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="2174,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -454,5 +679,6 @@
         </TryCatch.Catches>
       </TryCatch>
     </Sequence>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2270,164" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;----- Finalizando secuencia FiltroTres -----&quot;]" />
   </Sequence>
 </Activity>

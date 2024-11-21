@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1793,1455" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1793,970" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -128,7 +128,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="512,1390" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="512,905" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -172,7 +172,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence sap:VirtualizedContainerService.HintSize="450,1245" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence sap:VirtualizedContainerService.HintSize="450,760" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="in_FilePath" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_FueraRango" />
@@ -186,7 +186,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_FueraRango]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="388,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\EXPORT.XLSX" />
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_FueraRango]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="388,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\ES-UKM_CASE.xlsx" />
       <ui:FilterDataTable DataTable="[dt_FueraRango]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_RangoUno]" SelectColumnsMode="Remove">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
@@ -214,55 +214,14 @@
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
       </ui:FilterDataTable>
-      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_RangoUno]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\FranjaUno-UKM_CASE.xlsx" />
-      <ui:FilterDataTable DataTable="[dt_FueraRango]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dt_RangoDos]" SelectColumnsMode="Remove">
-        <ui:FilterDataTable.Filters>
-          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-            <ui:FilterOperationArgument BooleanOperator="And" Operator="GTE">
-              <ui:FilterOperationArgument.Column>
-                <InArgument x:TypeArguments="x:String">["Valor de crédito pendiente"]</InArgument>
-              </ui:FilterOperationArgument.Column>
-              <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["50001"]</InArgument>
-              </ui:FilterOperationArgument.Operand>
-            </ui:FilterOperationArgument>
-            <ui:FilterOperationArgument BooleanOperator="And" Operator="LTE">
-              <ui:FilterOperationArgument.Column>
-                <InArgument x:TypeArguments="x:String">["Valor de crédito pendiente"]</InArgument>
-              </ui:FilterOperationArgument.Column>
-              <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["200000"]</InArgument>
-              </ui:FilterOperationArgument.Operand>
-            </ui:FilterOperationArgument>
-          </scg:List>
-        </ui:FilterDataTable.Filters>
-        <ui:FilterDataTable.SelectColumns>
-          <scg:List x:TypeArguments="InArgument" Capacity="4">
-            <x:Null />
-          </scg:List>
-        </ui:FilterDataTable.SelectColumns>
-      </ui:FilterDataTable>
-      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_RangoUno]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\FranjaDos-UKM_CASE.xlsx" />
-      <ui:FilterDataTable DataTable="[dt_FueraRango]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_RangoTres]" SelectColumnsMode="Remove">
-        <ui:FilterDataTable.Filters>
-          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-            <ui:FilterOperationArgument BooleanOperator="And" Operator="GTE">
-              <ui:FilterOperationArgument.Column>
-                <InArgument x:TypeArguments="x:String">["Valor de crédito pendiente"]</InArgument>
-              </ui:FilterOperationArgument.Column>
-              <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:Int32">[200000]</InArgument>
-              </ui:FilterOperationArgument.Operand>
-            </ui:FilterOperationArgument>
-          </scg:List>
-        </ui:FilterDataTable.Filters>
-        <ui:FilterDataTable.SelectColumns>
-          <scg:List x:TypeArguments="InArgument" Capacity="4">
-            <x:Null />
-          </scg:List>
-        </ui:FilterDataTable.SelectColumns>
-      </ui:FilterDataTable>
-      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_RangoUno]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\FranjaTres-UKM_CASE.xlsx" />
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim columnas As String() = {&quot;Valor de crédito pendiente&quot;, &quot;Límite de crédito&quot;, &quot;Open Invoices&quot;, &quot;Open Orders&quot;, &quot;0-30 Días&quot;, &quot;31-60 Días&quot;, &quot;61-90 Días&quot;, &quot;Sobr 90 Días&quot;, &quot;Delivery Value&quot;, &quot;Billing Document Value&quot;}&#xD;&#xA;&#xD;&#xA;For Each row As DataRow In dt.Rows&#xD;&#xA;    For Each colName As String In columnas&#xD;&#xA;        ' Verifica que la columna exista en el DataTable&#xD;&#xA;        If dt.Columns.Contains(colName) Then&#xD;&#xA;            ' Realiza el reemplazo si el valor no es nulo&#xD;&#xA;            row(colName) = row(colName).ToString().Replace(&quot;.&quot;, &quot;,&quot;)&#xD;&#xA;        End If&#xD;&#xA;    Next&#xD;&#xA;Next&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="388,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+        <ui:InvokeCode.Arguments>
+          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt">
+            <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_RangoUno" />
+          </InOutArgument>
+        </ui:InvokeCode.Arguments>
+      </ui:InvokeCode>
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_RangoUno]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\FranjaUno-UKM_CASE.xlsx" />
     </Sequence>
   </Sequence>
 </Activity>
