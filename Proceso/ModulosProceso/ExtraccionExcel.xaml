@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1793,4270</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,5973</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtraccionExcel_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -114,92 +114,128 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExtraccionExcel" sap:VirtualizedContainerService.HintSize="1361,4205" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="ExtraccionExcel" sap:VirtualizedContainerService.HintSize="1376,5828" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1299,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;----- Iniciando descarga fichero UMK_CASE -----&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="1299,3780" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="88309305-a81d-41fc-b56f-9c715a3dde27" Version="V2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1314,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;----- Iniciando descarga fichero UMK_CASE -----&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="1314,5403" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="88309305-a81d-41fc-b56f-9c715a3dde27" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1265,3417" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1280,5040" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'GridViewAllItems Desmar…'" sap:VirtualizedContainerService.HintSize="1203,189" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="88309305-a81d-41fc-b56f-9c715a3dde27" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'GridViewAllItems Desmar…'" sap:VirtualizedContainerService.HintSize="1218,189" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="88309305-a81d-41fc-b56f-9c715a3dde27" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="645, 621, 25, 29" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[1]/shell' tableCol='-1' tableRow='-1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[1]/shell' /&gt;" Guid="7edc2831-46db-4485-ac3f-57bff06e47db" InformativeScreenshot="b007c708218a3877c65f5d790b5954b8.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="1203,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="1218,189" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Contexto' role='popup menu' /&gt;&lt;ctrl automationid='17' name='Hoja de cálculo...' /&gt;" Guid="b549d8e6-1560-4982-9769-38ba272d2705" SearchSteps="Selector" />
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Contexto' role='popup menu' /&gt;&lt;ctrl name='Hoja de cálculo...' /&gt;" Guid="b549d8e6-1560-4982-9769-38ba272d2705" SearchSteps="Selector" />
               </uix:NClick.Target>
-            </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1203,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V3">
-              <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Sequence>
-              </uix:NCheckState.IfExists>
-              <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Throw Exception="[new SystemException(&quot;Error al acceder a la ventana de descarga&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_1" />
-                </Sequence>
-              </uix:NCheckState.IfNotExists>
-              <uix:NCheckState.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Seleccionar cálculo costes tabla' idx='*' /&gt;" Guid="f0b984a3-c495-4f52-9705-061d3a9f3c80" SearchSteps="Selector" />
-              </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </uix:NCheckState>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: P10(1)/200 Seleccionar cálculo costes tabla" sap:VirtualizedContainerService.HintSize="1203,595" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" OpenMode="Never" ScopeGuid="187cb3fa-bbbf-412c-9047-b5c2372220a2" Version="V2">
+            </uix:NClick>
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: P10(1)/200 Export As" sap:VirtualizedContainerService.HintSize="1218,1249" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" OpenMode="Never" ScopeGuid="de3fa813-11a6-40b1-8442-87b3c031092f" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,272" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,926" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Continuar (Intro)'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="187cb3fa-bbbf-412c-9047-b5c2372220a2" Version="V3">
-                      <uix:NClick.Target>
-                        <uix:TargetAnchorable DesignTimeRectangle="426, 273, 23, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="fd0eef4e-ee18-4a9d-a1fb-5f3e45155cc0" InformativeScreenshot="92ffcbadaf7a8efdb99977e3f7db50c7.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Seleccionar cálculo costes tabla' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
-                      </uix:NClick.Target>
-                    </uix:NClick>
+                    <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Export As'" sap:VirtualizedContainerService.HintSize="954,836" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="de3fa813-11a6-40b1-8442-87b3c031092f" Version="V3">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,594" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'EXPORT_20241204_104527'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="de3fa813-11a6-40b1-8442-87b3c031092f" Text="[in_country + &quot;-&quot; + in_FileName]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="172, 96, 548, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;sap id='usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/txtGS_EXPORT-FILE_NAME' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/txtGS_EXPORT-FILE_NAME' /&gt;" Guid="dc15aee2-7fcc-4847-80d4-c48eea4f1ef9" InformativeScreenshot="f1b05c76c11b3a846b8f9dac0817af21.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Export As' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.VerifyOptions>
+                              <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              </uix:VerifyExecutionTypeIntoOptions>
+                            </uix:NTypeInto.VerifyOptions>
+                          </uix:NTypeInto>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Exportar a...'" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de3fa813-11a6-40b1-8442-87b3c031092f" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable CVScreenId="69c6500e-885d-4949-86be-656feaa21316" CvTextArea="643, 249, 64, 14" CvTextArgument="Exportar a..." CvType="Text" DesignTimeRectangle="622, 244, 89, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[20]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[20]' check:text='Exportar a...' /&gt;" Guid="08e3cc14-3ea5-4469-b105-f7d9205b6615" InformativeScreenshot="0479baf2a5e5670038379c4a60fbb19c.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Export As' idx='*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Throw Exception="[new SystemException(&quot;Error al acceder a la ventana de descarga&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="0, 0, 800, 275" DesignTimeScaleFactor="1" Guid="c0f60dae-ba0a-497a-9835-da100c4557c7" InformativeScreenshot="ed98403f4f3e2f83261389c5e1f723b2.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Export As' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
               <uix:NApplicationCard.TargetApp>
-                <uix:TargetApp Area="230, 301, 487, 304" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG8SURBVFhH7ZPNS8JgHMd3jk7SeQbZIcyyrpX9H9FVQi081inFKPAlzQgLRCPCZEpEnYKKlKLEl14Nj73NIgXrUkd/7XHPbFLWpqGXfeCLDIaf7/PdRkhISDSdt3CrjElbk9JC7K6Ppie9TrqRmfY66Kvg8HkhLFMSbp8lTzrPoFHpcCXB4TM9Poe6BkqPoJEFFIzc5jPnsiElK0c0qoDClUDyp1uqX4PVLFwBuTMF2mAa9MFL0G9csAniiLjWMb8a1xGQjjhPXpqdZmYfxNovuALt83HIv35AvUSSGVBPBYC0xcpy5uQvNKX6mp1PuQDTOFeovUCxWIRI4gaUEx4gZyOMPAWd5dn7hrDuO5UF3vHfiQPJ92LXoBpfxHL25PZqs/P5jwKH8TSoDG4gLfulk3OzP1A9v8sRFQVEvgPo5Eiu1C2AfOagPLvdZ87eUerqs/PhCsgdCdD6o2BY3gG9Z1tQxpa2oNu4AiSWs7Ob/56dD1egFOspkHNR5jkKDLrXelIx+z3VK1yOqChQY/DstGg5ot4CePasqNn51FOAm13wC/cTx4GRqH/VlKklm2vGpKBPTUJCQqIqBPEJehJ6L6S9cUMAAAAASUVORK5CYII=" InformativeScreenshot="9b16093893f6eb6e748bfbc208eabc97.png" Selector="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Seleccionar cálculo costes tabla' idx='*' /&gt;" Title="P10(1)/200 Seleccionar cálculo costes tabla" />
+                <uix:TargetApp Area="11, 181, 800, 275" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG8SURBVFhH7ZPNS8JgHMd3jk7SeQbZIcyyrpX9H9FVQi081inFKPAlzQgLRCPCZEpEnYKKlKLEl14Nj73NIgXrUkd/7XHPbFLWpqGXfeCLDIaf7/PdRkhISDSdt3CrjElbk9JC7K6Ppie9TrqRmfY66Kvg8HkhLFMSbp8lTzrPoFHpcCXB4TM9Poe6BkqPoJEFFIzc5jPnsiElK0c0qoDClUDyp1uqX4PVLFwBuTMF2mAa9MFL0G9csAniiLjWMb8a1xGQjjhPXpqdZmYfxNovuALt83HIv35AvUSSGVBPBYC0xcpy5uQvNKX6mp1PuQDTOFeovUCxWIRI4gaUEx4gZyOMPAWd5dn7hrDuO5UF3vHfiQPJ92LXoBpfxHL25PZqs/P5jwKH8TSoDG4gLfulk3OzP1A9v8sRFQVEvgPo5Eiu1C2AfOagPLvdZ87eUerqs/PhCsgdCdD6o2BY3gG9Z1tQxpa2oNu4AiSWs7Ob/56dD1egFOspkHNR5jkKDLrXelIx+z3VK1yOqChQY/DstGg5ot4CePasqNn51FOAm13wC/cTx4GRqH/VlKklm2vGpKBPTUJCQqIqBPEJehJ6L6S9cUMAAAAASUVORK5CYII=" InformativeScreenshot="d658fc33d1e9f589ac80b89be4840e6a.png" Selector="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Export As' idx='*' /&gt;" Title="P10(1)/200 Export As" />
               </uix:NApplicationCard.TargetApp>
             </uix:NApplicationCard>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1203,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Descargando fichero Excel&quot;]" />
-            <Delay Duration="00:00:15" sap:VirtualizedContainerService.HintSize="1203,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
-            <uix:NCheckState DisplayName="Check App State 'Guardar como'" sap:VirtualizedContainerService.HintSize="1203,1606" sap2010:WorkflowViewState.IdRef="NCheckState_2" IsLoose="True" Version="V3">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1218,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Descargando fichero Excel&quot;]" />
+            <Delay Duration="00:00:15" sap:VirtualizedContainerService.HintSize="1218,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <uix:NCheckState DisplayName="Check App State 'Guardar como'" sap:VirtualizedContainerService.HintSize="1218,2161" sap2010:WorkflowViewState.IdRef="NCheckState_2" IsLoose="True" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,1103" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
@@ -240,19 +276,19 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="637,1357" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="652,1912" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: P10(1)/200 Seleccionar cálculo costes tabla" sap:VirtualizedContainerService.HintSize="575,1267" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Version="V2">
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: P10(1)/200 Grabar fichero" sap:VirtualizedContainerService.HintSize="590,1822" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Version="V2">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="541,951" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,1508" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="PathName" />
                             <Variable x:TypeArguments="x:String" Name="FileName" />
@@ -262,7 +298,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="494,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                             <ui:MultipleAssign.AssignOperations>
                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -284,7 +320,7 @@
                               </scg:List>
                             </ui:MultipleAssign.AssignOperations>
                           </ui:MultipleAssign>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Text="[PathName]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="494,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Text="[PathName]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable CVScreenId="2db77713-29e2-4d3b-97d9-9b1e0be7a217" CvTextArea="129, 72, 58, 13" CvTextArgument="C:\\TEMP" CvType="Text" DesignTimeRectangle="127, 67, 476, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" Guid="86981dd6-c764-4cd9-a08e-bd27a8ab9e6e" InformativeScreenshot="d7e42daf7639c6aa8d176ec067b378cd.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Grabar fichero' idx='*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -295,7 +331,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Text="[in_country + &quot;-&quot; + FileName]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="494,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Text="[in_country + &quot;-&quot; + FileName]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable CVScreenId="2db77713-29e2-4d3b-97d9-9b1e0be7a217" CvElementArea="126, 96, 463, 27" CvType="InputBox" DesignTimeRectangle="126, 96, 463, 27" DesignTimeScaleFactor="1" ElementType="InputBox" Guid="ef510cfe-ceb3-4c62-a6e2-298aada0680b" InformativeScreenshot="c3d749d46cbb1734537d57d02e5f4e2a.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Grabar fichero' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -306,16 +342,54 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Crear'" sap:VirtualizedContainerService.HintSize="479,182" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Crear'" sap:VirtualizedContainerService.HintSize="494,189" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable CVScreenId="3c13fd39-5f46-4175-961c-487d71e50b03" CvTextArea="585, 162, 32, 11" CvTextArgument="Crear" CvType="Text" DesignTimeRectangle="583, 157, 37, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' check:text='Crear' /&gt;" Guid="f1baa9e2-14b5-474d-8af5-6f2ac9665dd3" InformativeScreenshot="245be020b6304a53d96734d3ccdd6a1e.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Grabar fichero' idx='*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
+                          <uix:NCheckState DisplayName="Check App State 'Fichero C:\Users\zesrpa…'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,550" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="88309305-a81d-41fc-b56f-9c715a3dde27" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,308" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reemplazar'" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd22d1fb-dfe9-469d-a661-5b0272f0beff" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable CVScreenId="6bd0b96e-df11-42c7-b241-9ad946fc14e6" CvTextArea="478, 162, 65, 14" CvTextArgument="Reemplazar" CvType="Text" DesignTimeRectangle="475, 157, 71, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='tbar[0]/btn[11]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[11]' check:text='Reemplazar' /&gt;" Guid="472ea85a-b6a1-4894-a0f3-2e2722e70a34" InformativeScreenshot="1365e20529812302195f504634584c71.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Grabar fichero' idx='*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                  <uix:NClick.VerifyOptions>
+                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                      <uix:VerifyExecutionOptions.Retry>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </uix:VerifyExecutionOptions.Retry>
+                                      <uix:VerifyExecutionOptions.Timeout>
+                                        <InArgument x:TypeArguments="x:Double" />
+                                      </uix:VerifyExecutionOptions.Timeout>
+                                    </uix:VerifyExecutionOptions>
+                                  </uix:NClick.VerifyOptions>
+                                </uix:NClick>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable CVScreenId="4e8dd29e-d4d4-4a84-a3f6-0fb5ed043c25" CvTextArea="52, 1009, 389, 11" CvTextArgument="Fichero C:\Users\zesrpa1\OneDrive - STIHL Group\Documents\ ya existe" CvType="Text" DesignTimeRectangle="50, 1008, 391, 14" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='sbar/pane[0]' text='*ya existe' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='sbar/pane[0]' text='*ya existe' check:text='Fichero C:\Users\zesrpa1\OneDrive - STIHL Group\Documents\ ya existe' /&gt;" Guid="78518497-a3bd-43bc-a442-c48c002ac6ed" InformativeScreenshot="a9b7f6f649af7c9183eab79aa8955d69.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NCheckState.Target>
+                          </uix:NCheckState>
                         </Sequence>
                       </ActivityAction>
                     </uix:NApplicationCard.Body>
                     <uix:NApplicationCard.TargetApp>
-                      <uix:TargetApp Area="230, 301, 487, 304" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG8SURBVFhH7ZPNS8JgHMd3jk7SeQbZIcyyrpX9H9FVQi081inFKPAlzQgLRCPCZEpEnYKKlKLEl14Nj73NIgXrUkd/7XHPbFLWpqGXfeCLDIaf7/PdRkhISDSdt3CrjElbk9JC7K6Ppie9TrqRmfY66Kvg8HkhLFMSbp8lTzrPoFHpcCXB4TM9Poe6BkqPoJEFFIzc5jPnsiElK0c0qoDClUDyp1uqX4PVLFwBuTMF2mAa9MFL0G9csAniiLjWMb8a1xGQjjhPXpqdZmYfxNovuALt83HIv35AvUSSGVBPBYC0xcpy5uQvNKX6mp1PuQDTOFeovUCxWIRI4gaUEx4gZyOMPAWd5dn7hrDuO5UF3vHfiQPJ92LXoBpfxHL25PZqs/P5jwKH8TSoDG4gLfulk3OzP1A9v8sRFQVEvgPo5Eiu1C2AfOagPLvdZ87eUerqs/PhCsgdCdD6o2BY3gG9Z1tQxpa2oNu4AiSWs7Ob/56dD1egFOspkHNR5jkKDLrXelIx+z3VK1yOqChQY/DstGg5ot4CePasqNn51FOAm13wC/cTx4GRqH/VlKklm2vGpKBPTUJCQqIqBPEJehJ6L6S9cUMAAAAASUVORK5CYII=" InformativeScreenshot="9b16093893f6eb6e748bfbc208eabc97.png" Selector="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Seleccionar cálculo costes tabla' idx='*' /&gt;" Title="P10(1)/200 Seleccionar cálculo costes tabla" />
+                      <uix:TargetApp Area="217, 418, 683, 188" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG8SURBVFhH7ZPNS8JgHMd3jk7SeQbZIcyyrpX9H9FVQi081inFKPAlzQgLRCPCZEpEnYKKlKLEl14Nj73NIgXrUkd/7XHPbFLWpqGXfeCLDIaf7/PdRkhISDSdt3CrjElbk9JC7K6Ppie9TrqRmfY66Kvg8HkhLFMSbp8lTzrPoFHpcCXB4TM9Poe6BkqPoJEFFIzc5jPnsiElK0c0qoDClUDyp1uqX4PVLFwBuTMF2mAa9MFL0G9csAniiLjWMb8a1xGQjjhPXpqdZmYfxNovuALt83HIv35AvUSSGVBPBYC0xcpy5uQvNKX6mp1PuQDTOFeovUCxWIRI4gaUEx4gZyOMPAWd5dn7hrDuO5UF3vHfiQPJ92LXoBpfxHL25PZqs/P5jwKH8TSoDG4gLfulk3OzP1A9v8sRFQVEvgPo5Eiu1C2AfOagPLvdZ87eUerqs/PhCsgdCdD6o2BY3gG9Z1tQxpa2oNu4AiSWs7Ob/56dD1egFOspkHNR5jkKDLrXelIx+z3VK1yOqChQY/DstGg5ot4CePasqNn51FOAm13wC/cTx4GRqH/VlKklm2vGpKBPTUJCQqIqBPEJehJ6L6S9cUMAAAAASUVORK5CYII=" InformativeScreenshot="3c4967d39e56ae31eee92190ba4db921.png" Selector="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Grabar fichero' idx='*' /&gt;" Title="P10(1)/200 Seleccionar cálculo costes tabla" />
                     </uix:NApplicationCard.TargetApp>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -336,8 +410,53 @@
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="1203,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <Assign sap:VirtualizedContainerService.HintSize="1203,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <uix:NCheckState DisplayName="Check App State 'Sí'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1218,471" sap2010:WorkflowViewState.IdRef="NCheckState_4" IsLoose="True" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,222" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'sapguiserver.exe Confir...'" sap:VirtualizedContainerService.HintSize="388,132" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cb07e7d-e134-468a-a2aa-45bf0c43a75a" InformativeScreenshot="a81e6dd03cde2d9b2b1528d4bd50758d" Selector="&lt;wnd app='sapguiserver.exe' cls='#32770' title='Confirmar Guardar como' idx='*' /&gt;&lt;wnd cls='DirectUIHWND' /&gt;&lt;wnd cls='Button' title='&amp;amp;Sí' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="206, 100, 68, 23" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd cls='DirectUIHWND' /&gt;&lt;wnd cls='CtrlNotifySink' idx='7' /&gt;" FuzzySelectorArgument="&lt;wnd cls='DirectUIHWND' /&gt;&lt;wnd cls='CtrlNotifySink' check:fulltext='Sí' /&gt;" Guid="e7548751-a57a-447b-be72-2765944b2fe3" InformativeScreenshot="f6e4f089116bb87d9031367422660d26.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='Confirmar Guardar como' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="1218,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <Assign sap:VirtualizedContainerService.HintSize="1218,114" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[out_FilePath]</OutArgument>
               </Assign.To>
@@ -345,7 +464,7 @@
                 <InArgument x:TypeArguments="x:String">[in_PathName +"\"+ in_country + "-" + in_FileName]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1203,158" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="EXCEL.EXE" />
+            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1218,158" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="EXCEL.EXE" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -353,6 +472,6 @@
         <uix:TargetApp Area="-8, -8, 1936, 1048" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARMSURBVFhHzZf7b5NVHMb3X3nBC/EWY0z8BaMQlR/8RRPRHyS4IWAIRKcONeAERnTZwpDRwTbGuuHajc2Cy7pR6NZt0Bu93+/XXcjjeY5760tdS1kHs8mTNu/lfJ7z/T7nvH0b+Imm8ruTueVMKr+CRHbpsYoMssiU8JT4kV26L0+sd8PjEFmSSRPxTDH/JOGKyCS7YSvgishuWO/Ek9T/10A6vyyVFL+zhRXkiqtM77rX1qP/GCA0v7SKOVcMi94EDnXdwIGzNzA47UQgkRd921wTJQMcmGCrP4lveoxSrdrbeO6Lbqln9p3H3vYJJrdiJTgGK8Vx+J0RleOxapWTBlhmgk8Nm7Hr2BA+PqnHnxY/3jzSL8HPN13AC0JP7f0dPw/ekgPzvpQYOFtcQUEACbIHU9CbPbj0lw1XTS5M28KwBVIIisrRhGKOLS0ZIDycLGB8zouJOZ+8gSdiYqZGawjHB0z4SBj65PQYPjtzDY0dBrgjGTHIqvw2zPtxengWn7aN4a2j/dIoK0bTLx/sEZPow84WrZjUKJo6r6Olbwa6W24kxPjSgOKEs6IzdY95rLh8X5pq11nQObog1aG3wDhnx56TI9jWuAYU39u/1OClAz0lbRd6cb9GVpHXvP+DFm1DJpjtfgRjaYjtuPIqUMRQsj2vfXWpNBBb0fSrDt06o4D+A1KDKYK3NXbjjcO92N8xgWGjFe5AFJG4aEk0hUA0jVA883ADFCvx+W8TckA14PzINI50jcsq8BiNKHnZ+f0VnOg3wjjvgj8URSAchzcUhy+cEPCUhEeSudoMMDhd44ty9moDbzdfxuiUBe9+N4Cn93XjlYMXseeUDhfGzFh0+OAPRuAJROTMPcFYCc7yhxPZ2lpAZcSezX3h1UMXZckVE5z54bPjGLg+i6PnDNAb78Dh8sPjC+KeV8gXhssvTKzB/ZHkA/BYulCbASojsvC1ZgrPllWBs1+0u+By++B0+WAXBpweGghVhLP0hHPcmg1wzYeSeblHKFmggV2i1zfnHbA6vRLucAcegLPvClzpuwKnajZAMYx3fUns+PaKDBoNvHdMi6HJBVhsHjjX4Cw9+67A1aFj6bmbKmM+kgGKu5lhwS+XJRP/gVjb5/S3YbTcg0sFV4eOcKXvajj1yAYorgqNwSpXxe4fh3BGO4OrU3fhFYlX97088erSK9qQAYrPgJbeGbwjMtB62YhOnVms9dhDQ1euDRtgKCOpAloHTfipdwrNmkmEoomKoSsvvaING6BoIpNfQpvWJB5WerHFJsTsq4euXHUZoPgobtfNYkfzAFyBmNznq4WuXHUbyAkDfZM2uQ2bHUFEEv/CK/VdrboN8GnJv26vi2X5x00nEul81dCVq24DFLPw4YkR/CL+LaVzxaqhK9emvJhwh7w26xV7wx2kssWa4fLFRFy8Ka9mNJEU8Fi6djjZW/9yyo9I7Ba9njc0/A2ubZVs280dJwAAAABJRU5ErkJggg==" InformativeScreenshot="c518031d87ca3612b9b0a1a2e378382a.png" Selector="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" Title="P10 (1) 200 SAP Credit Management" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1299,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;----- Finalizando descarga fichero UMK_CASE -----&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1314,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;----- Finalizando descarga fichero UMK_CASE -----&quot;]" />
   </Sequence>
 </Activity>

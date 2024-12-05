@@ -309,9 +309,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </State>
-    <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Se obtienen ConfigFramework y ConfigProcess" DisplayName="Configuration State" sap:VirtualizedContainerService.HintSize="871,3383" sap2010:WorkflowViewState.IdRef="State_2">
+    <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Se obtienen ConfigFramework y ConfigProcess" DisplayName="Configuration State" sap:VirtualizedContainerService.HintSize="871,3713" sap2010:WorkflowViewState.IdRef="State_2">
       <State.Entry>
-        <TryCatch DisplayName="Try Catch Configuration" sap:VirtualizedContainerService.HintSize="825,2964" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <TryCatch DisplayName="Try Catch Configuration" sap:VirtualizedContainerService.HintSize="825,3294" sap2010:WorkflowViewState.IdRef="TryCatch_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -319,7 +319,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <TryCatch.Try>
-            <Sequence DisplayName="Configuración" sap:VirtualizedContainerService.HintSize="787,2736" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Configuración" sap:VirtualizedContainerService.HintSize="787,3066" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -722,7 +722,9 @@
                   </ActivityAction>
                 </ui:ForEachFileX.Body>
               </ui:ForEachFileX>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DescargaFicheroSP - Invoke Workflow File (Proceso\ModulosProceso\DescargaFicheroSP.xaml)" sap:VirtualizedContainerService.HintSize="725,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Proceso\ModulosProceso\DescargaFicheroSP.xaml">
+              <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="725,165" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="NWBC.exe" />
+              <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="725,165" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="msedge.exe" />
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DescargaFicheroSP - Invoke Workflow File (Proceso\ModulosProceso\DescargaFicheroSP.xaml)" sap:VirtualizedContainerService.HintSize="725,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Proceso\ModulosProceso\DescargaFicheroSP.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="x:String" x:Key="out_LCFilePath">[LC_FilePath]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
@@ -741,7 +743,7 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Error Configuration" sap:VirtualizedContainerService.HintSize="496,462" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Error Configuration" sap:VirtualizedContainerService.HintSize="496,440" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

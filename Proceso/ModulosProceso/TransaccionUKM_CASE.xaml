@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TransaccionUKM_CASE" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TransaccionUKM_CASE" this:TransaccionUKM_CASE.in_country="Bloqueados ES" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_country" Type="InArgument(x:String)" />
     <x:Property Name="out_FilePath" Type="OutArgument(x:String)" />
@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1793,5970</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,6943</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TransaccionUKM_CASE_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -53,6 +53,19 @@
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -118,55 +131,62 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TransaccionUKM_CASE" sap:VirtualizedContainerService.HintSize="1274,5905" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TransaccionUKM_CASE" sap:VirtualizedContainerService.HintSize="1370,6878" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="cont" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientesIncidencias" />
+      <Variable x:TypeArguments="sd2:DataTable" Name="dt_ClientesIncidencias" />
       <Variable x:TypeArguments="ui:UiElement" Name="window" />
       <Variable x:TypeArguments="x:Int32" Name="contDT" />
       <Variable x:TypeArguments="x:String" Name="textToCopy" />
+      <Variable x:TypeArguments="x:String" Name="FilePath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1212,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;----- Iniciando Transaccion UMK_CASE -----&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Proceso\ModulosProceso\LoginSAPBC.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="1212,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Proceso\ModulosProceso\LoginSAPBC.xaml">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1308,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;----- Iniciando Transaccion UMK_CASE -----&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Proceso\ModulosProceso\LoginSAPBC.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="1308,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Proceso\ModulosProceso\LoginSAPBC.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Tenant">P10-200 : ONE STIHL - Production ERP</InArgument>
         <InArgument x:TypeArguments="ui:UiElement" x:Key="out_window">[window]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1212,5276" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1308,6249" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="1174,5016" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="1270,5989" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V2" WindowResize="Maximize">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1140,4725" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1236,5658" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="UKM_CASE - Liberación de órdenes" sap:VirtualizedContainerService.HintSize="1078,3992" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="UKM_CASE - Liberación de órdenes" sap:VirtualizedContainerService.HintSize="1174,4925" sap2010:WorkflowViewState.IdRef="Sequence_36">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Buscar o'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1016,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Text="UKM_CASE" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Buscar o'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1112,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Text="UKM_CASE" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="165, 52, 1685, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='_speedText' name='Buscar o indicar nombre de aplicación o código de transacción' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='_speedText' name='Buscar o indicar nombre de aplicación o código de transacción' role='editable text' /&gt;" Guid="c1a1398b-8f1d-4e1f-9ceb-b9e52e64b3c5" ImageBase64="" InformativeScreenshot="e19bd095ace39c29609c7adb3540287d.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10/200 Índice' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NCheckState DisplayName="Check App State 'Iniciar Casos'" sap:VirtualizedContainerService.HintSize="1016,732" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
+                  <uix:NCheckState DisplayName="Check App State 'Iniciar Casos'" sap:VirtualizedContainerService.HintSize="1112,732" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_23">
                         <sap:WorkflowViewStateService.ViewState>
@@ -200,144 +220,645 @@
                       <uix:TargetAnchorable DesignTimeRectangle="10, 10, 580, 32" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl name='Iniciar Casos en SAP Credit Management (UKM_CASE)' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Iniciar Casos en SAP Credit Management (UKM_CASE)' role='menu item' automationid='' check:text='Iniciar Casos en SAP Credit Management (UKM_CASE)' /&gt;" Guid="22b68bdb-bcab-4dc1-b208-28885fdb815c" InformativeScreenshot="f3094226cf2628f71f20145adceaf062.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NCheckState.Target>
                   </uix:NCheckState>
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1016,532" sap2010:WorkflowViewState.IdRef="TryCatch_2">
-                    <TryCatch.Try>
-                      <Sequence sap:VirtualizedContainerService.HintSize="416,272" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Double" DelayBefore="3" DisplayName="Click 'Casos'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NClick_31" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable CvTextArea="74, 370, 37, 12" CvTextArgument="Casos" CvType="Text" DesignTimeRectangle="74, 370, 37, 12" DesignTimeScaleFactor="1" ElementType="Text" Guid="b71c957d-5fb3-41f3-942c-06ad041ba1c7" InformativeScreenshot="adbc4df2f742d6c6148450ca6ed10547.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CvTextArea="59, 347, 147, 16" CvTextArgument="SAP Credit Management:" CvType="Text" DesignTimeRectangle="59, 347, 147, 16" ElementType="Text" Guid="49fa305c-8b06-4e57-87ae-ebf9c05bb45d" SearchSteps="CV" TargetType="ComputerVisionBased" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NClick.Target>
-                        </uix:NClick>
-                      </Sequence>
-                    </TryCatch.Try>
-                    <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="420,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ActivityAction x:TypeArguments="s:Exception">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                          </ActivityAction.Argument>
-                          <Throw Exception="[new System.Exception(&quot;Error al navegar a transacción UKM_CASE&quot;)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
-                        </ActivityAction>
-                      </Catch>
-                    </TryCatch.Catches>
-                  </TryCatch>
-                  <uix:NCheckState DisplayName="Check App State 'Decisión de'" sap:VirtualizedContainerService.HintSize="1016,519" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
-                    <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,270" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Double" DelayBefore="3" DisplayName="Click 'Decisión de'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_29" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable DesignTimeRectangle="22, 388, 427, 21" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='shellcont/shell/shellcont[0]/shell/shellcont[1]/shell/shellcont[1]/shell' relpath='SAP Credit Management: Caso crédito/Casos/Decisión de crédito documentada - Búsqueda' /&gt;" FuzzySelectorArgument="&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='shellcont/shell/shellcont[0]/shell/shellcont[1]/shell/shellcont[1]/shell' relpath='SAP Credit Management: Caso crédito/Casos/Decisión de crédito documentada - Búsqueda' check:text='Decisión de crédito documentada - Búsqueda' /&gt;" Guid="7f630dea-f78c-427f-94bb-79656956bc22" InformativeScreenshot="cfafc470e20989279735b6ead430b735.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                          </uix:NClick.Target>
-                        </uix:NClick>
-                      </Sequence>
-                    </uix:NCheckState.IfExists>
-                    <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_32">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </uix:NCheckState.IfNotExists>
-                    <uix:NCheckState.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="205, 391, 427, 21" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='shellcont/shell/shellcont[0]/shell/shellcont[1]/shell/shellcont[1]/shell' relpath='SAP Credit Management: Caso crédito/Casos/Decisión de crédito documentada - Búsqueda' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='shellcont/shell/shellcont[0]/shell/shellcont[1]/shell/shellcont[1]/shell' relpath='SAP Credit Management: Caso crédito/Casos/Decisión de crédito documentada - Búsqueda' check:text='Decisión de crédito documentada - Búsqueda' /&gt;" Guid="d74ec9cb-f768-4695-bcdd-6ef5ef5b0631" InformativeScreenshot="fdf38cd6bb016b4545e0cebbafd8bac9.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
-                    </uix:NCheckState.Target>
-                  </uix:NCheckState>
-                  <uix:NCheckState DisplayName="Check App State 'SAPGUI.GridViewCtrl.1'" sap:VirtualizedContainerService.HintSize="1016,1480" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
-                    <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,1231" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Haciendo click en el botón 'Variante Búsqueda'&quot;]" />
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="3" DisplayName="Click 'Variantes busqueda'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable CvElementArea="504, 546, 136, 26" CvTextArea="526, 553, 109, 14" CvTextArgument="Variantes busqueda" CvType="Button" DesignTimeRectangle="504, 546, 136, 26" DesignTimeScaleFactor="1" ElementType="Button" Guid="b2c4fa0a-e988-4c9c-83ab-b881b6fadaa6" InformativeScreenshot="0a37517b041542bb432660fc0a0458dd.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
-                          </uix:NClick.Target>
-                        </uix:NClick>
-                        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: " sap:VirtualizedContainerService.HintSize="450,777" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="a68f7cf3-e81e-4185-86ae-35e3da90d961" Version="V2">
-                          <uix:NApplicationCard.Body>
-                            <ActivityAction x:TypeArguments="x:Object">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                              </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,461" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: P10 (1) 200 SAP Credit Management" sap:VirtualizedContainerService.HintSize="1112,3821" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Never" ScopeGuid="df23de34-740d-44fa-8d79-c985f903bf2c" Version="V2">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1078,3507" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Acceder a decisión de crédto documentada" sap:VirtualizedContainerService.HintSize="1016,1660" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454,532" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                              <TryCatch.Try>
+                                <Sequence sap:VirtualizedContainerService.HintSize="416,272" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Double" DelayBefore="3" DisplayName="Click 'Casos'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NClick_31" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable CvTextArea="74, 370, 37, 12" CvTextArgument="Casos" CvType="Text" DesignTimeRectangle="74, 370, 37, 12" DesignTimeScaleFactor="1" ElementType="Text" Guid="b71c957d-5fb3-41f3-942c-06ad041ba1c7" InformativeScreenshot="adbc4df2f742d6c6148450ca6ed10547.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target CvTextArea="59, 347, 147, 16" CvTextArgument="SAP Credit Management:" CvType="Text" DesignTimeRectangle="59, 347, 147, 16" ElementType="Text" Guid="49fa305c-8b06-4e57-87ae-ebf9c05bb45d" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </TryCatch.Try>
+                              <TryCatch.Catches>
+                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="420,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ActivityAction x:TypeArguments="s:Exception">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                    </ActivityAction.Argument>
+                                    <Throw Exception="[new System.Exception(&quot;Error al navegar a transacción UKM_CASE&quot;)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                  </ActivityAction>
+                                </Catch>
+                              </TryCatch.Catches>
+                            </TryCatch>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="454,415" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,304" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Decisión de'" sap:VirtualizedContainerService.HintSize="354,216" sap2010:WorkflowViewState.IdRef="NClick_47" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable Accuracy="1" DesignTimeRectangle="22, 391, 427, 21" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='shellcont/shell/shellcont[0]/shell/shellcont[1]/shell/shellcont[1]/shell' relpath='SAP Credit Management: Caso crédito/Casos/Decisión de crédito documentada - Búsqueda' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='shellcont/shell/shellcont[0]/shell/shellcont[1]/shell/shellcont[1]/shell' relpath='SAP Credit Management: Caso crédito/Casos/Decisión de crédito documentada - Búsqueda' check:text='Decisión de crédito documentada - Búsqueda' /&gt;" Guid="ea81d7bd-f171-40dd-b666-4652e97bffc7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAa8AAAAZCAYAAACGj6HdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAYOSURBVHhe7Zy9biM5DMevvOfZYosD7i2uChCkTp0+CPIGfgPD2wdI5drptkwZpImBuFycuwDX6ER9zFCURI0dx+sZ/3+AAGskUSIlihrZyR8fHx/m5eXFbLb/ISEhISEhnXSiePXr363pgtef/8yRkJCQkJBOOmXBCwAAADh1ELwAAACMDgQvAAAAowPBCwAAwOhA8AIAADA6ziN4bdbmuvBrFZduns1rqPZ7WJv54sm8hVyZSp31D3Px/crM1yF/EJ7M7cFlKqzuzbfv92al9sfHNMRen+HI+p8sJ2KHL1njnwVr5BSYfvDaPJu/Q6C6/hmedWzN7GZlliFXhxbrX3aTZenyytzqO+4w3ObdcIRiHTsmO4bDO9AxHZN0aAUugo0psYUNZAe3wTH1/0o+a5uvtAPJlv50X+iL1scpzsVU1si4mXbwYoGrHLyG4p2NgtXbOiS7iV7YZxeLqa3gU3TM2pgQvOqcfvDi/rRaXNkgZg8yocZpM5U1Mm4mHbxmN33g6oPX2sxm6+6q8PXns32+Dbka0dlCNhKvvEKWrjhuLysnyfWT20ziSfPi7oe/+nLXIlGG3XDueJ1wPZbUsVhZXT+U+NtLqDsPwdXJ0QJsIsu+TS6sDtwxNZ0kDR3nboMKsjW52pg6W9DmHOvYZG2Vt7WJ26ZEU/+GvIbO/ZKxcoQO80U6R29dnsbBOqnZKsrJ5rpsm3jg8s+ZjkTDDmrbnSFbCH/i9tJsV/MRQtNBlWmp2Zg4qm3AUCYevPIrweXs2bxu1ma5odzWLG3gen1YmZnL1yg4m4M/j5/9yvULOjqLL+uDiD1pWgd07bhT2Tbf4ubnnLTkzFKW7YufWl1dVp45LScdM/W5uuMOqOkkaelIZXajacptjCmzBd8s5BiEbTIafTXlyfLKvDrYWLk9bJb0dxtxki/bI7FVJyf037DNnAVerQ+vR2qHett9iP2FrMXZ9XJA4Ke+Sz4SZSZzUVs3BLdPqn9iY1H29bYBQzmv4LWht6zwOcG+jT3ExVkiLuCQ7fAnXPecFm10PodWxuBO5Ra+dYrOUQKyTiaL9aU6qaAky7UP9TWdJE0d2Rg0ua0xJfoJ3Ypj2HHMqv7EHvPqYGPVyhyUr8330LmWMiWsvGWHjJbsFtSeAgBLLACoetFY6bP0keJcsHYtmTUbH902YChnFbyWs3CFyJ6/PjyGa8VH5e3LO1u+AfbP/YlcOKRNdCpOTpUS4VRvq/76onQFVZblnc2dwDUnFZRl9fU1nSQ76ajIbY0plZXqVm7LbCNo9dWSVy4PaPNQLCvnXR8VW+lzzT97+mtJ296tMU3PtH2tbYYLLr5e1TZOdupPtO7LBxRCjKXgI00dFJmajQ9qG3BQzid40VvXQ/hui37IcfPoE3t2XX37yp3N4Rw1OETx5BfQyjKnilQCUlEWOyk2HD+hJMu1D/W1cUt20VGr2xpTIkvoVpTLbCNp9dWSp+khdeZjLZZV8vv2UbIN1Y15Xj7EDrW2e0Ht5Zzss4aZj7R00GRqNj66bcBQzjZ4uc8yoM1qKy46mz2JVX9t2Ndx0Je83d28L+vr+u9GZGCiE5y8s8+CVyYrnhxDueakGWHMos/+5BjKizpJ5LjKOno0uaGsNqbMFlw3OQZhm4xGX015spzpHGU7He1z166kA0F1a3kux8Jtpc41/2xxm3Bf1+uR6lm1g9p2H3qden8iXehZWi5tV/WRlg6KzLTMsst6PLhtwFDOJ3hZlrNwRciel57l+AWcXCtc0hfzYoXazST5VRIvJ4foyqzDWefwfsQ2oEKd4iYl6g3+vqCEHHP2aztFJ8kQHSOaXG1MQpbfLGy9eDrWbFNC68uVN+TVdLb010kk1/8qsaSDnyMlX7NVUU4/9tQ2/i2lk9Ga56S80XZnaJxRHpPLDFu3XW5vH2QsjbmsyiRqNiaOahswlLMKXjlD/0gZADA+0mAOpsWkg1f3Aw0t/fZ/DwUA+BoQvKbMpIMXAOCcQfCaMgheAAAARgeCFwAAgNGB4AUAAGB0ZMHr/f0dCQkJCQnppBPevAAAAIwOH7y25n+n+XGNvDTBZAAAAABJRU5ErkJggg==" InformativeScreenshot="b75841e3b9b6dd3f77818dacb869f0c0.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Selector, Image" Version="V4" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                    <uix:NClick.VerifyOptions>
+                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                        <uix:VerifyExecutionOptions.Retry>
+                                          <InArgument x:TypeArguments="x:Boolean" />
+                                        </uix:VerifyExecutionOptions.Retry>
+                                        <uix:VerifyExecutionOptions.Timeout>
+                                          <InArgument x:TypeArguments="x:Double" />
+                                        </uix:VerifyExecutionOptions.Timeout>
+                                      </uix:VerifyExecutionOptions>
+                                    </uix:NClick.VerifyOptions>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                            </ui:CommentOut>
+                            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="980a8c40-ba0c-4b89-baf4-936f476e93f5" DisplayName="CV Screen Scope 'client'" sap:VirtualizedContainerService.HintSize="454,591" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+                              <p:CVScope.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" Descriptor="[&quot;Target: Text 'Decision de credito documentada - Busqueda' (82,383,271,16)&quot;]" DesignTimeCacheId="980a8c40-ba0c-4b89-baf4-936f476e93f5" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="47068d8c1d27edbd4cede9efa71cfa77" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                      <p:CvClickWithDescriptor.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </p:CvClickWithDescriptor.CursorPosition>
+                                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                        <uc:CvDescriptor Id="7ded9b9d-83af-4689-be1c-6c4a804477a4">
+                                          <uc:CvDescriptor.Target>
+                                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="82, 383, 271, 16" ElementType="Text" Text="Decision de credito documentada - Busqueda" />
+                                          </uc:CvDescriptor.Target>
+                                        </uc:CvDescriptor>
+                                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                      <p:CvClickWithDescriptor.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="dc84a333-442c-4864-8cf0-a8adf8b6b22c">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </p:CvClickWithDescriptor.Target>
+                                    </p:CvClickWithDescriptor>
+                                  </Sequence>
+                                </ActivityAction>
+                              </p:CVScope.Body>
+                              <p:CVScope.DesignTimeCache>
+                                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                              </p:CVScope.DesignTimeCache>
+                              <p:CVScope.DesignTimeCacheContainer>
+                                <uc:CvCacheContainer>
+                                  <uc:CvCacheContainer.Caches>
+                                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                                      <uc:CVCache DataSent="False" DisplayName="Screen CV Click - 'Decision de (Main)" Id="980a8c40-ba0c-4b89-baf4-936f476e93f5" InformativeScreenshot="8358985a66cc34886af7d6e61c644e62" LogicalPosition="0, 3" OcrText="P10/200 Indice P10 (1) 200 SAP Credit X + ... &lt; _ X &lt; Buscar o indicar nombre de aplicacion o codigo de transaccion &lt; STIHL SAP Credit Management Menu v v Mas v Finalizar Vista basada en roles Busqueda de casos Favoritos ID caso Referencia ext. Doc.pendiente (0 ) Responsable Responsable Entrada Interl.cial. Segm.credito N° documento Status doc. Actividades v Val.credito pend. Moneda Fe.creacion Cierre planificado v SAP Credit Management: Caso credito v Casos Prioridad Causa Decision de credito documentada - Busqueda Liberacion/Cancel. Proceso no cumplido Mis decisiones de credito documentadas Grupo credito Abrev. respons. Solicitud de limite de credito Cond.d pedido Cond.expedicion Solicitud de limite de credito: Busqueda &gt; Modelos registros y reg.casos Ctd.aciertos restringid.. 500 &gt; Documentos &gt; Business objects Ejecutar busqueda Variantes busqueda Archivo lista Historial Actividades v" Position="0, 3" ScreenshotGuid="f5a39fe6-dfbf-4966-9185-f9b07d49888b" ServerVersion="24.10.4.0">
+                                        <uc:CVCache.CvAnchorRelations>
+                                          <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="8">
+                                            <uc:AnchorRelationInfo IsTargetText="False" Target="60">
+                                              <uc:AnchorRelationInfo.Anchors>
+                                                <x:Array Type="x:Int32">
+                                                  <x:Int32>115</x:Int32>
+                                                  <x:Int32>116</x:Int32>
+                                                </x:Array>
+                                              </uc:AnchorRelationInfo.Anchors>
+                                            </uc:AnchorRelationInfo>
+                                            <uc:AnchorRelationInfo IsTargetText="False" Target="48">
+                                              <uc:AnchorRelationInfo.Anchors>
+                                                <x:Array Type="x:Int32">
+                                                  <x:Int32>14</x:Int32>
+                                                  <x:Int32>15</x:Int32>
+                                                  <x:Int32>16</x:Int32>
+                                                  <x:Int32>17</x:Int32>
+                                                  <x:Int32>18</x:Int32>
+                                                  <x:Int32>19</x:Int32>
+                                                  <x:Int32>20</x:Int32>
+                                                  <x:Int32>21</x:Int32>
+                                                  <x:Int32>22</x:Int32>
+                                                  <x:Int32>23</x:Int32>
+                                                </x:Array>
+                                              </uc:AnchorRelationInfo.Anchors>
+                                            </uc:AnchorRelationInfo>
+                                            <uc:AnchorRelationInfo IsTargetText="False" Target="148">
+                                              <uc:AnchorRelationInfo.Anchors>
+                                                <x:Array Type="x:Int32">
+                                                  <x:Int32>29</x:Int32>
+                                                </x:Array>
+                                              </uc:AnchorRelationInfo.Anchors>
+                                            </uc:AnchorRelationInfo>
+                                            <uc:AnchorRelationInfo IsTargetText="False" Target="103">
+                                              <uc:AnchorRelationInfo.Anchors>
+                                                <x:Array Type="x:Int32">
+                                                  <x:Int32>129</x:Int32>
+                                                </x:Array>
+                                              </uc:AnchorRelationInfo.Anchors>
+                                            </uc:AnchorRelationInfo>
+                                            <uc:AnchorRelationInfo IsTargetText="False" Target="77">
+                                              <uc:AnchorRelationInfo.Anchors>
+                                                <x:Array Type="x:Int32">
+                                                  <x:Int32>52</x:Int32>
+                                                </x:Array>
+                                              </uc:AnchorRelationInfo.Anchors>
+                                            </uc:AnchorRelationInfo>
+                                            <uc:AnchorRelationInfo IsTargetText="False" Target="94">
+                                              <uc:AnchorRelationInfo.Anchors>
+                                                <x:Array Type="x:Int32">
+                                                  <x:Int32>47</x:Int32>
+                                                  <x:Int32>48</x:Int32>
+                                                  <x:Int32>49</x:Int32>
+                                                </x:Array>
+                                              </uc:AnchorRelationInfo.Anchors>
+                                            </uc:AnchorRelationInfo>
+                                            <uc:AnchorRelationInfo IsTargetText="False" Target="91">
+                                              <uc:AnchorRelationInfo.Anchors>
+                                                <x:Array Type="x:Int32">
+                                                  <x:Int32>42</x:Int32>
+                                                </x:Array>
+                                              </uc:AnchorRelationInfo.Anchors>
+                                            </uc:AnchorRelationInfo>
+                                          </scg:List>
+                                        </uc:CVCache.CvAnchorRelations>
+                                        <uc:CVCache.CvTables>
+                                          <x:Array Type="uc:CvTableInfo">
+                                            <uc:CvTableInfo>
+                                              <uc:CvTableInfo.Columns>
+                                                <x:Array Type="x:Int32">
+                                                  <x:Int32>788</x:Int32>
+                                                  <x:Int32>822</x:Int32>
+                                                  <x:Int32>1119</x:Int32>
+                                                </x:Array>
+                                              </uc:CvTableInfo.Columns>
+                                              <uc:CvTableInfo.Rows>
+                                                <x:Array Type="x:Int32">
+                                                  <x:Int32>208</x:Int32>
+                                                  <x:Int32>233</x:Int32>
+                                                  <x:Int32>255</x:Int32>
+                                                  <x:Int32>277</x:Int32>
+                                                  <x:Int32>393</x:Int32>
+                                                  <x:Int32>416</x:Int32>
+                                                  <x:Int32>440</x:Int32>
+                                                </x:Array>
+                                              </uc:CvTableInfo.Rows>
+                                            </uc:CvTableInfo>
+                                          </x:Array>
+                                        </uc:CVCache.CvTables>
+                                        <uc:CVCache.CvUiElements>
+                                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="256">
+                                            <uc:CvElementInfo Category="Button" Region="219, 3, 215, 33" />
+                                            <uc:CvElementInfo Category="Button" Region="785, 395, 38, 24" />
+                                            <uc:CvElementInfo Category="Button" Region="785, 372, 38, 24" />
+                                            <uc:CvElementInfo Category="Button" Region="786, 349, 38, 24" />
+                                            <uc:CvElementInfo Category="Button" Region="786, 303, 38, 24" />
+                                            <uc:CvElementInfo Category="Button" Region="785, 326, 38, 24" />
+                                            <uc:CvElementInfo Category="Button" Region="785, 280, 38, 24" />
+                                            <uc:CvElementInfo Category="Icon" Region="1794, 1, 21, 22" />
+                                            <uc:CvElementInfo Category="Button" Region="1306, 348, 40, 26" />
+                                            <uc:CvElementInfo Category="Button" Region="785, 417, 39, 25" />
+                                            <uc:CvElementInfo Category="Button" Region="1307, 256, 39, 24" />
+                                            <uc:CvElementInfo Category="Button" Region="742, 533, 96, 25" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="30, 513, 15, 18" />
+                                            <uc:CvElementInfo Category="Button" Region="1307, 279, 40, 26" />
+                                            <uc:CvElementInfo Category="Icon" Region="13, 8, 21, 21" />
+                                            <uc:CvElementInfo Category="Icon" Region="13, 223, 21, 22" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="30, 492, 15, 17" />
+                                            <uc:CvElementInfo Category="Button" Region="785, 256, 38, 24" />
+                                            <uc:CvElementInfo Category="Icon" Region="80, 304, 20, 20" />
+                                            <uc:CvElementInfo Category="Button" Region="1307, 417, 40, 26" />
+                                            <uc:CvElementInfo Category="Icon" Region="1886, 45, 25, 21" />
+                                            <uc:CvElementInfo Category="Icon" Region="445, 7, 23, 23" />
+                                            <uc:CvElementInfo Category="Icon" Region="794, 236, 20, 19" />
+                                            <uc:CvElementInfo Category="Icon" Region="125, 45, 22, 21" />
+                                            <uc:CvElementInfo Category="Icon" Region="225, 7, 22, 21" />
+                                            <uc:CvElementInfo Category="Icon" Region="14, 171, 21, 20" />
+                                            <uc:CvElementInfo Category="Button" Region="785, 233, 39, 24" />
+                                            <uc:CvElementInfo Category="Button" Region="594, 533, 136, 25" />
+                                            <uc:CvElementInfo Category="Icon" Region="794, 282, 20, 19" />
+                                            <uc:CvElementInfo Category="Icon" Region="794, 328, 21, 19" />
+                                            <uc:CvElementInfo Category="Icon" Region="14, 197, 21, 20" />
+                                            <uc:CvElementInfo Category="Icon" Region="14, 661, 20, 20" />
+                                            <uc:CvElementInfo Category="Icon" Region="794, 420, 20, 19" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="30, 470, 15, 17" />
+                                            <uc:CvElementInfo Category="Icon" Region="1316, 259, 20, 19" />
+                                            <uc:CvElementInfo Category="Icon" Region="794, 259, 20, 20" />
+                                            <uc:CvElementInfo Category="Button" Region="1307, 233, 39, 24" />
+                                            <uc:CvElementInfo Category="Icon" Region="14, 250, 19, 19" />
+                                            <uc:CvElementInfo Category="Icon" Region="794, 305, 20, 19" />
+                                            <uc:CvElementInfo Category="Icon" Region="1317, 236, 19, 19" />
+                                            <uc:CvElementInfo Category="Icon" Region="794, 351, 20, 20" />
+                                            <uc:CvElementInfo Category="Icon" Region="794, 374, 20, 20" />
+                                            <uc:CvElementInfo Category="Icon" Region="46, 493, 19, 17" />
+                                            <uc:CvElementInfo Category="Icon" Region="46, 515, 18, 17" />
+                                            <uc:CvElementInfo Category="Icon" Region="1316, 328, 20, 19" />
+                                            <uc:CvElementInfo Category="Icon" Region="1316, 282, 20, 20" />
+                                            <uc:CvElementInfo Category="Icon" Region="598, 536, 18, 18" />
+                                            <uc:CvElementInfo Category="Icon" Region="794, 397, 20, 19" />
+                                            <uc:CvElementInfo Category="InputBox" Region="157, 42, 1684, 28" />
+                                            <uc:CvElementInfo Category="Icon" Region="1316, 213, 21, 20" />
+                                            <uc:CvElementInfo Category="CloseButton" Region="407, 10, 20, 19" />
+                                            <uc:CvElementInfo Category="Icon" Region="1316, 421, 19, 19" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="29, 361, 17, 15" />
+                                            <uc:CvElementInfo Category="Icon" Region="276, 131, 21, 21" />
+                                            <uc:CvElementInfo Category="Icon" Region="746, 536, 18, 18" />
+                                            <uc:CvElementInfo Category="Icon" Region="1316, 397, 20, 19" />
+                                            <uc:CvElementInfo Category="Button" Region="452, 533, 130, 25" />
+                                            <uc:CvElementInfo Category="Icon" Region="1316, 351, 20, 20" />
+                                            <uc:CvElementInfo Category="CloseButton" Region="1895, 3, 19, 18" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="48, 134, 20, 18" />
+                                            <uc:CvElementInfo Category="InputBox" Region="596, 462, 193, 27" />
+                                            <uc:CvElementInfo Category="Icon" Region="185, 9, 21, 20" />
+                                            <uc:CvElementInfo Category="Icon" Region="1814, 45, 21, 21" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="14, 338, 17, 16" />
+                                            <uc:CvElementInfo Category="Icon" Region="62, 404, 18, 18" />
+                                            <uc:CvElementInfo Category="Icon" Region="794, 212, 21, 20" />
+                                            <uc:CvElementInfo Category="Icon" Region="47, 362, 17, 16" />
+                                            <uc:CvElementInfo Category="MinimizeButton" Region="1835, 3, 26, 23" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="341, 134, 19, 17" />
+                                            <uc:CvElementInfo Category="Button" Region="1307, 393, 40, 26" />
+                                            <uc:CvElementInfo Category="Button" Region="1307, 324, 40, 26" />
+                                            <uc:CvElementInfo Category="Icon" Region="62, 382, 18, 18" />
+                                            <uc:CvElementInfo Category="Icon" Region="14, 628, 20, 19" />
+                                            <uc:CvElementInfo Category="Icon" Region="46, 471, 18, 16" />
+                                            <uc:CvElementInfo Category="Icon" Region="454, 536, 21, 20" />
+                                            <uc:CvElementInfo Category="Button" Region="40, 301, 25, 26" />
+                                            <uc:CvElementInfo Category="Icon" Region="31, 339, 18, 16" />
+                                            <uc:CvElementInfo Category="InputBox" Region="12, 247, 430, 24" />
+                                            <uc:CvElementInfo Category="Icon" Region="62, 428, 18, 16" />
+                                            <uc:CvElementInfo Category="Icon" Region="62, 448, 18, 18" />
+                                            <uc:CvElementInfo Category="Icon" Region="45, 46, 21, 21" />
+                                            <uc:CvElementInfo Category="Icon" Region="11, 45, 26, 22" />
+                                            <uc:CvElementInfo Category="Button" Region="1847, 42, 34, 28" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="87, 44, 19, 23" />
+                                            <uc:CvElementInfo Category="Button" Region="6, 42, 34, 29" />
+                                            <uc:CvElementInfo Category="Button" Region="42, 80, 71, 34" />
+                                            <uc:CvElementInfo Category="Button" Region="1307, 209, 40, 27" />
+                                            <uc:CvElementInfo Category="Icon" Region="1853, 45, 21, 21" />
+                                            <uc:CvElementInfo Category="Button" Region="163, 658, 24, 26" />
+                                            <uc:CvElementInfo Category="Icon" Region="166, 660, 18, 20" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="12, 85, 18, 22" />
+                                            <uc:CvElementInfo Category="InputBox" Region="12, 195, 430, 24" />
+                                            <uc:CvElementInfo Category="Button" Region="3, 2, 215, 35" />
+                                            <uc:CvElementInfo Category="Button" Region="12, 657, 111, 26" />
+                                            <uc:CvElementInfo Category="InputBox" Region="12, 221, 430, 24" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="1770, 6, 14, 16" />
+                                            <uc:CvElementInfo Category="Icon" Region="43, 304, 19, 20" />
+                                            <uc:CvElementInfo Category="Icon" Region="239, 131, 23, 20" />
+                                            <uc:CvElementInfo Category="Button" Region="40, 42, 33, 28" />
+                                            <uc:CvElementInfo Category="Icon" Region="765, 211, 22, 22" />
+                                            <uc:CvElementInfo Category="Button" Region="12, 301, 24, 26" />
+                                            <uc:CvElementInfo Category="Icon" Region="236, 299, 28, 27" />
+                                            <uc:CvElementInfo Category="Icon" Region="136, 660, 22, 21" />
+                                            <uc:CvElementInfo Category="InputBox" Region="13, 625, 428, 24" />
+                                            <uc:CvElementInfo Category="Button" Region="200, 301, 26, 26" />
+                                            <uc:CvElementInfo Category="Icon" Region="14, 303, 21, 21" />
+                                            <uc:CvElementInfo Category="Icon" Region="476, 15, 26, 18" />
+                                            <uc:CvElementInfo Category="Button" Region="133, 657, 26, 26" />
+                                            <uc:CvElementInfo Category="Icon" Region="202, 302, 22, 22" />
+                                            <uc:CvElementInfo Category="Button" Region="78, 301, 111, 25" />
+                                            <uc:CvElementInfo Category="MaximizeButton" Region="1864, 1, 23, 23" />
+                                            <uc:CvElementInfo Category="Button" Region="765, 211, 23, 23" />
+                                            <uc:CvElementInfo Category="Icon" Region="1864, 1, 23, 22" />
+                                            <uc:CvElementInfo Category="Cell" Region="788, 208, 34, 25" />
+                                            <uc:CvElementInfo Category="Cell" Region="788, 233, 34, 22" />
+                                            <uc:CvElementInfo Category="Cell" Region="788, 255, 34, 22" />
+                                            <uc:CvElementInfo Category="Cell" Region="788, 277, 34, 116" />
+                                            <uc:CvElementInfo Category="Cell" Region="788, 393, 34, 23" />
+                                            <uc:CvElementInfo Category="Cell" Region="788, 416, 34, 24" />
+                                            <uc:CvElementInfo Category="Cell" Region="822, 208, 297, 25" />
+                                            <uc:CvElementInfo Category="Cell" Region="822, 233, 297, 22" />
+                                            <uc:CvElementInfo Category="Cell" Region="822, 255, 297, 22" />
+                                            <uc:CvElementInfo Category="Cell" Region="822, 277, 297, 116" />
+                                            <uc:CvElementInfo Category="Cell" Region="822, 393, 297, 23" />
+                                            <uc:CvElementInfo Category="Cell" Region="822, 416, 297, 24" />
+                                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="786, 209, 38, 26" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="598, 211, 185, 23" />
+                                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="457, 216, 16, 15" />
+                                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="237, 300, 27, 27" />
+                                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="238, 131, 24, 20" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="12, 688, 433, 296" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="450, 572, 1465, 387" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="16, 600, 425, 20" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="9, 986, 1902, 37" />
+                                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="12, 301, 24, 26" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="15, 556, 428, 22" />
+                                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="86, 44, 19, 22" />
+                                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="12, 86, 17, 21" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="16, 578, 425, 22" />
+                                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="7, 334, 450, 25" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="598, 230, 190, 210" />
+                                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1771, 5, 14, 16" />
+                                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="14, 628, 20, 20" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="15, 534, 428, 22" />
+                                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="21, 379, 425, 23" />
+                                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="14, 169, 427, 25" />
+                                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="12, 195, 430, 24" />
+                                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="12, 221, 431, 24" />
+                                            <uc:CvElementInfo Category="InputBox" Region="82, 129, 146, 26" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="78, 301, 111, 25" />
+                                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="12, 658, 110, 26" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="205, 130, 22, 25" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="169, 303, 19, 22" />
+                                            <uc:CvElementInfo Category="ArrowButton" Region="102, 659, 20, 23" />
+                                          </scg:List>
+                                        </uc:CVCache.CvUiElements>
+                                        <uc:CVCache.OcrTexts>
+                                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="132">
+                                            <uc:OcrTextInfo Region="39, 13, 54, 13" Text="P10/200" />
+                                            <uc:OcrTextInfo Region="96, 11, 38, 15" Text="Indice" />
+                                            <uc:OcrTextInfo Region="252, 13, 26, 13" Text="P10" />
+                                            <uc:OcrTextInfo Region="281, 13, 19, 16" Text="(1)" />
+                                            <uc:OcrTextInfo Region="302, 13, 26, 13" Text="200" />
+                                            <uc:OcrTextInfo Region="331, 13, 28, 13" Text="SAP" />
+                                            <uc:OcrTextInfo Region="361, 13, 39, 13" Text="Credit" />
+                                            <uc:OcrTextInfo Region="410, 13, 14, 13" Text="X" />
+                                            <uc:OcrTextInfo Region="448, 10, 17, 17" Text="+" />
+                                            <uc:OcrTextInfo Region="480, 7, 20, 20" Text="..." />
+                                            <uc:OcrTextInfo Region="1773, 8, 8, 11" Text="&lt;" />
+                                            <uc:OcrTextInfo Region="1838, 4, 19, 17" Text="_" />
+                                            <uc:OcrTextInfo Region="1897, 6, 14, 13" Text="X" />
+                                            <uc:OcrTextInfo Region="90, 47, 11, 17" Text="&lt;" />
+                                            <uc:OcrTextInfo Region="166, 49, 43, 13" Text="Buscar" />
+                                            <uc:OcrTextInfo Region="211, 52, 9, 10" Text="o" />
+                                            <uc:OcrTextInfo Region="223, 49, 42, 13" Text="indicar" />
+                                            <uc:OcrTextInfo Region="267, 50, 48, 12" Text="nombre" />
+                                            <uc:OcrTextInfo Region="318, 49, 17, 13" Text="de" />
+                                            <uc:OcrTextInfo Region="338, 49, 62, 16" Text="aplicacion" />
+                                            <uc:OcrTextInfo Region="403, 52, 9, 10" Text="o" />
+                                            <uc:OcrTextInfo Region="415, 49, 42, 16" Text="codigo" />
+                                            <uc:OcrTextInfo Region="460, 49, 18, 13" Text="de" />
+                                            <uc:OcrTextInfo Region="479, 49, 70, 13" Text="transaccion" />
+                                            <uc:OcrTextInfo Region="14, 88, 12, 17" Text="&lt;" />
+                                            <uc:OcrTextInfo Region="49, 90, 56, 15" Text="STIHL" />
+                                            <uc:OcrTextInfo Region="862, 89, 34, 16" Text="SAP" />
+                                            <uc:OcrTextInfo Region="899, 88, 51, 17" Text="Credit" />
+                                            <uc:OcrTextInfo Region="952, 89, 106, 20" Text="Management" />
+                                            <uc:OcrTextInfo Region="14, 136, 33, 12" Text="Menu" />
+                                            <uc:OcrTextInfo Region="50, 138, 15, 9" Text="v" />
+                                            <uc:OcrTextInfo Region="209, 138, 14, 9" Text="v" />
+                                            <uc:OcrTextInfo Region="315, 136, 25, 12" Text="Mas" />
+                                            <uc:OcrTextInfo Region="343, 138, 15, 9" Text="v" />
+                                            <uc:OcrTextInfo Region="1856, 135, 50, 13" Text="Finalizar" />
+                                            <uc:OcrTextInfo Region="33, 175, 28, 11" Text="Vista" />
+                                            <uc:OcrTextInfo Region="63, 175, 39, 11" Text="basada" />
+                                            <uc:OcrTextInfo Region="104, 177, 15, 9" Text="en" />
+                                            <uc:OcrTextInfo Region="120, 175, 30, 11" Text="roles" />
+                                            <uc:OcrTextInfo Region="454, 188, 73, 18" Text="Busqueda" />
+                                            <uc:OcrTextInfo Region="531, 188, 19, 15" Text="de" />
+                                            <uc:OcrTextInfo Region="554, 192, 44, 11" Text="casos" />
+                                            <uc:OcrTextInfo Region="34, 201, 51, 11" Text="Favoritos" />
+                                            <uc:OcrTextInfo Region="458, 216, 14, 13" Text="ID" />
+                                            <uc:OcrTextInfo Region="474, 219, 29, 10" Text="caso" />
+                                            <uc:OcrTextInfo Region="979, 216, 62, 13" Text="Referencia" />
+                                            <uc:OcrTextInfo Region="1044, 217, 23, 12" Text="ext." />
+                                            <uc:OcrTextInfo Region="35, 227, 82, 14" Text="Doc.pendiente" />
+                                            <uc:OcrTextInfo Region="118, 227, 16, 13" Text="(0" />
+                                            <uc:OcrTextInfo Region="137, 227, 6, 13" Text=")" />
+                                            <uc:OcrTextInfo Region="458, 239, 76, 16" Text="Responsable" />
+                                            <uc:OcrTextInfo Region="979, 239, 77, 16" Text="Responsable" />
+                                            <uc:OcrTextInfo Region="34, 253, 42, 11" Text="Entrada" />
+                                            <uc:OcrTextInfo Region="458, 262, 56, 13" Text="Interl.cial." />
+                                            <uc:OcrTextInfo Region="979, 262, 78, 16" Text="Segm.credito" />
+                                            <uc:OcrTextInfo Region="458, 285, 15, 13" Text="N°" />
+                                            <uc:OcrTextInfo Region="476, 286, 65, 12" Text="documento" />
+                                            <uc:OcrTextInfo Region="979, 285, 39, 13" Text="Status" />
+                                            <uc:OcrTextInfo Region="1021, 285, 26, 13" Text="doc." />
+                                            <uc:OcrTextInfo Region="101, 307, 67, 11" Text="Actividades" />
+                                            <uc:OcrTextInfo Region="170, 309, 15, 8" Text="v" />
+                                            <uc:OcrTextInfo Region="457, 308, 64, 13" Text="Val.credito" />
+                                            <uc:OcrTextInfo Region="524, 308, 32, 16" Text="pend." />
+                                            <uc:OcrTextInfo Region="979, 308, 47, 13" Text="Moneda" />
+                                            <uc:OcrTextInfo Region="458, 331, 69, 13" Text="Fe.creacion" />
+                                            <uc:OcrTextInfo Region="979, 331, 35, 13" Text="Cierre" />
+                                            <uc:OcrTextInfo Region="1017, 331, 62, 16" Text="planificado" />
+                                            <uc:OcrTextInfo Region="17, 343, 12, 7" Text="v" />
+                                            <uc:OcrTextInfo Region="51, 340, 25, 12" Text="SAP" />
+                                            <uc:OcrTextInfo Region="79, 340, 37, 12" Text="Credit" />
+                                            <uc:OcrTextInfo Region="119, 340, 78, 15" Text="Management:" />
+                                            <uc:OcrTextInfo Region="200, 340, 32, 12" Text="Caso" />
+                                            <uc:OcrTextInfo Region="235, 339, 42, 13" Text="credito" />
+                                            <uc:OcrTextInfo Region="32, 365, 12, 7" Text="v" />
+                                            <uc:OcrTextInfo Region="66, 362, 37, 12" Text="Casos" />
+                                            <uc:OcrTextInfo Region="458, 354, 52, 13" Text="Prioridad" />
+                                            <uc:OcrTextInfo Region="979, 354, 38, 13" Text="Causa" />
+                                            <uc:OcrTextInfo Region="82, 383, 50, 13" Text="Decision" />
+                                            <uc:OcrTextInfo Region="136, 384, 17, 12" Text="de" />
+                                            <uc:OcrTextInfo Region="155, 383, 42, 13" Text="credito" />
+                                            <uc:OcrTextInfo Region="200, 383, 82, 13" Text="documentada" />
+                                            <uc:OcrTextInfo Region="285, 386, 6, 9" Text="-" />
+                                            <uc:OcrTextInfo Region="294, 383, 59, 16" Text="Busqueda" />
+                                            <uc:OcrTextInfo Region="458, 377, 108, 13" Text="Liberacion/Cancel." />
+                                            <uc:OcrTextInfo Region="979, 377, 49, 13" Text="Proceso" />
+                                            <uc:OcrTextInfo Region="1031, 380, 15, 10" Text="no" />
+                                            <uc:OcrTextInfo Region="1049, 377, 53, 16" Text="cumplido" />
+                                            <uc:OcrTextInfo Region="82, 406, 21, 12" Text="Mis" />
+                                            <uc:OcrTextInfo Region="106, 406, 63, 12" Text="decisiones" />
+                                            <uc:OcrTextInfo Region="171, 405, 18, 13" Text="de" />
+                                            <uc:OcrTextInfo Region="191, 405, 42, 13" Text="credito" />
+                                            <uc:OcrTextInfo Region="236, 405, 89, 13" Text="documentadas" />
+                                            <uc:OcrTextInfo Region="458, 400, 36, 16" Text="Grupo" />
+                                            <uc:OcrTextInfo Region="497, 400, 40, 13" Text="credito" />
+                                            <uc:OcrTextInfo Region="978, 400, 35, 13" Text="Abrev." />
+                                            <uc:OcrTextInfo Region="1015, 403, 50, 13" Text="respons." />
+                                            <uc:OcrTextInfo Region="82, 427, 52, 13" Text="Solicitud" />
+                                            <uc:OcrTextInfo Region="136, 427, 18, 13" Text="de" />
+                                            <uc:OcrTextInfo Region="156, 427, 32, 13" Text="limite" />
+                                            <uc:OcrTextInfo Region="191, 427, 17, 13" Text="de" />
+                                            <uc:OcrTextInfo Region="210, 427, 42, 13" Text="credito" />
+                                            <uc:OcrTextInfo Region="458, 423, 43, 13" Text="Cond.d" />
+                                            <uc:OcrTextInfo Region="510, 423, 39, 16" Text="pedido" />
+                                            <uc:OcrTextInfo Region="979, 423, 97, 16" Text="Cond.expedicion" />
+                                            <uc:OcrTextInfo Region="82, 449, 52, 13" Text="Solicitud" />
+                                            <uc:OcrTextInfo Region="136, 449, 18, 13" Text="de" />
+                                            <uc:OcrTextInfo Region="156, 449, 32, 13" Text="limite" />
+                                            <uc:OcrTextInfo Region="191, 449, 17, 13" Text="de" />
+                                            <uc:OcrTextInfo Region="210, 449, 46, 13" Text="credito:" />
+                                            <uc:OcrTextInfo Region="259, 449, 59, 16" Text="Busqueda" />
+                                            <uc:OcrTextInfo Region="35, 472, 7, 12" Text="&gt;" />
+                                            <uc:OcrTextInfo Region="66, 472, 52, 12" Text="Modelos" />
+                                            <uc:OcrTextInfo Region="121, 472, 51, 15" Text="registros" />
+                                            <uc:OcrTextInfo Region="173, 474, 9, 13" Text="y" />
+                                            <uc:OcrTextInfo Region="184, 473, 57, 14" Text="reg.casos" />
+                                            <uc:OcrTextInfo Region="458, 470, 70, 12" Text="Ctd.aciertos" />
+                                            <uc:OcrTextInfo Region="532, 469, 62, 16" Text="restringid.." />
+                                            <uc:OcrTextInfo Region="601, 469, 22, 13" Text="500" />
+                                            <uc:OcrTextInfo Region="34, 494, 8, 12" Text="&gt;" />
+                                            <uc:OcrTextInfo Region="66, 494, 75, 12" Text="Documentos" />
+                                            <uc:OcrTextInfo Region="34, 516, 8, 12" Text="&gt;" />
+                                            <uc:OcrTextInfo Region="66, 516, 51, 12" Text="Business" />
+                                            <uc:OcrTextInfo Region="120, 515, 44, 16" Text="objects" />
+                                            <uc:OcrTextInfo Region="474, 540, 47, 12" Text="Ejecutar" />
+                                            <uc:OcrTextInfo Region="522, 539, 55, 14" Text="busqueda" />
+                                            <uc:OcrTextInfo Region="616, 539, 53, 11" Text="Variantes" />
+                                            <uc:OcrTextInfo Region="670, 539, 55, 14" Text="busqueda" />
+                                            <uc:OcrTextInfo Region="764, 539, 44, 11" Text="Archivo" />
+                                            <uc:OcrTextInfo Region="810, 539, 23, 11" Text="lista" />
+                                            <uc:OcrTextInfo Region="34, 631, 45, 11" Text="Historial" />
+                                            <uc:OcrTextInfo Region="36, 664, 65, 11" Text="Actividades" />
+                                            <uc:OcrTextInfo Region="105, 666, 14, 9" Text="v" />
+                                          </scg:List>
+                                        </uc:CVCache.OcrTexts>
+                                      </uc:CVCache>
+                                    </scg:List>
+                                  </uc:CvCacheContainer.Caches>
+                                </uc:CvCacheContainer>
+                              </p:CVScope.DesignTimeCacheContainer>
+                              <p:CVScope.OCREngine>
+                                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                  <ActivityFunc.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                  </ActivityFunc.Argument>
+                                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                                </ActivityFunc>
+                              </p:CVScope.OCREngine>
+                              <p:CVScope.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="91f079ff-e4fb-4602-8d38-f419aef976f6" InformativeScreenshot="72bf149629cb243504fcd7d872d7bf50" Selector="&lt;ctrl role='client' /&gt;" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </p:CVScope.Target>
+                              <p:CVScope.UseLocalServer>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </p:CVScope.UseLocalServer>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </p:CVScope>
+                          </Sequence>
+                          <uix:NCheckState DisplayName="Check App State 'SAPGUI.GridViewCtrl.1'" sap:VirtualizedContainerService.HintSize="1016,1518" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,1229" sap2010:WorkflowViewState.IdRef="Sequence_25">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Bloqueados ES'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a68f7cf3-e81e-4185-86ae-35e3da90d961" Version="V3">
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Haciendo click en el botón 'Variante Búsqueda'&quot;]" />
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="3" DisplayName="Click 'Variantes busqueda'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
                                   <uix:NClick.Target>
-                                    <uix:TargetAnchorable CvTextArea="23, 136, 93, 17" CvTextArgument="[in_country]" CvType="Text" DesignTimeRectangle="20, 132, 497, 23" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;sap id='usr/cntlCONTAINER_REUSE0200/shellcont/shell/shellcont[0]/shell' text='{0}' /&gt;&quot;, in_country)]" FuzzySelectorArgument="[string.Format(&quot;&lt;sap id='usr/cntlCONTAINER_REUSE0200/shellcont/shell/shellcont[0]/shell' text='{0}' check:text='Bloqueados ES' /&gt;&quot;, in_country)]" Guid="35206d2b-e86c-4fd1-9e71-e9fe7e735868" ImageBase64="" InformativeScreenshot="dd48c7c7607806be335b97d28008bceb.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Gestionar variantes búsqueda' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    <uix:TargetAnchorable CvElementArea="504, 546, 136, 26" CvTextArea="526, 553, 109, 14" CvTextArgument="Variantes busqueda" CvType="Button" DesignTimeRectangle="504, 546, 136, 26" DesignTimeScaleFactor="1" ElementType="Button" Guid="b2c4fa0a-e988-4c9c-83ab-b881b6fadaa6" InformativeScreenshot="0a37517b041542bb432660fc0a0458dd.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a68f7cf3-e81e-4185-86ae-35e3da90d961" Version="V3">
-                                  <uix:NClick.Target>
-                                    <uix:TargetAnchorable DesignTimeRectangle="487, 708, 23, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='400' title='AppToolbar' /&gt;&lt;wnd aaname='Transferir entrada' idx='1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='400' title='AppToolbar' /&gt;&lt;wnd aaname='Transferir entrada' check:text='unchecked' /&gt;" Guid="4d3d116d-6896-470e-bf66-9558ae7fc24a" InformativeScreenshot="120992edd753c2f9906ea11563b096fb.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Gestionar variantes búsqueda' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                  </uix:NClick.Target>
-                                </uix:NClick>
+                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: " sap:VirtualizedContainerService.HintSize="450,777" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="a68f7cf3-e81e-4185-86ae-35e3da90d961" Version="V2">
+                                  <uix:NApplicationCard.Body>
+                                    <ActivityAction x:TypeArguments="x:Object">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,461" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Bloqueados ES'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_50" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a68f7cf3-e81e-4185-86ae-35e3da90d961" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable CvTextArea="23, 136, 93, 17" CvTextArgument="[in_country]" CvType="Text" DesignTimeRectangle="20, 132, 497, 23" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;sap id='usr/cntlCONTAINER_REUSE0200/shellcont/shell/shellcont[0]/shell' text='{0}' /&gt;&quot;, in_country)]" FuzzySelectorArgument="[string.Format(&quot;&lt;sap id='usr/cntlCONTAINER_REUSE0200/shellcont/shell/shellcont[0]/shell' text='{0}' check:text='Bloqueados ES' /&gt;&quot;, in_country)]" Guid="35206d2b-e86c-4fd1-9e71-e9fe7e735868" ImageBase64="" InformativeScreenshot="dd48c7c7607806be335b97d28008bceb.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Gestionar variantes búsqueda' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NClick_51" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a68f7cf3-e81e-4185-86ae-35e3da90d961" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable DesignTimeRectangle="487, 708, 23, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='400' title='AppToolbar' /&gt;&lt;wnd aaname='Transferir entrada' idx='1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='400' title='AppToolbar' /&gt;&lt;wnd aaname='Transferir entrada' check:text='unchecked' /&gt;" Guid="4d3d116d-6896-470e-bf66-9558ae7fc24a" InformativeScreenshot="120992edd753c2f9906ea11563b096fb.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Gestionar variantes búsqueda' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </uix:NApplicationCard.Body>
+                                  <uix:NApplicationCard.TargetApp>
+                                    <uix:TargetApp Area="0, 0, 0, 0" Selector="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Gestionar variantes búsqueda' idx='*'/&gt;" Title="P10(1)/200 Gestionar variantes búsqueda" />
+                                  </uix:NApplicationCard.TargetApp>
+                                </uix:NApplicationCard>
                               </Sequence>
-                            </ActivityAction>
-                          </uix:NApplicationCard.Body>
-                          <uix:NApplicationCard.TargetApp>
-                            <uix:TargetApp Area="0, 0, 0, 0" Selector="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Gestionar variantes búsqueda' idx='*'/&gt;" Title="P10(1)/200 Gestionar variantes búsqueda" />
-                          </uix:NApplicationCard.TargetApp>
-                        </uix:NApplicationCard>
-                      </Sequence>
-                    </uix:NCheckState.IfExists>
-                    <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_26">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Throw Exception="[new SystemException(&quot;Error al acceder al apartado: Decisiónde credito documentada - Busqueda&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_3" />
-                      </Sequence>
-                    </uix:NCheckState.IfNotExists>
-                    <uix:NCheckState.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="644, 192, 1266, 356" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[0]/shell/shellcont[0]/shell/shellcont/shell' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[0]/shell/shellcont[0]/shell/shellcont/shell' check:text='SAPGUI.GridViewCtrl.1' /&gt;" Guid="79b09033-6b9c-4312-a8e7-184508c5cb50" InformativeScreenshot="316c8349bafa73ba0cc1b7a8849cb022.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                    </uix:NCheckState.Target>
-                  </uix:NCheckState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ejecutar busqueda'" sap:VirtualizedContainerService.HintSize="1016,189" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable CvElementArea="362, 547, 130, 26" CvTextArea="387, 553, 100, 14" CvTextArgument="Ejecutar busqueda" CvType="Button" DesignTimeRectangle="362, 547, 130, 26" DesignTimeScaleFactor="1" ElementType="Button" Guid="88ec3ff1-ed3c-42ac-a12c-61fe69735c65" InformativeScreenshot="66ee9827bf9501a80a3a810584d5ea78.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1016,168" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Extrayendo datos para &quot; + in_country]" />
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Throw Exception="[new SystemException(&quot;Error al acceder al apartado: Decisiónde credito documentada - Busqueda&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="644, 192, 1266, 356" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[0]/shell/shellcont[0]/shell/shellcont/shell' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[0]/shell/shellcont[0]/shell/shellcont/shell' check:text='SAPGUI.GridViewCtrl.1' /&gt;" Guid="79b09033-6b9c-4312-a8e7-184508c5cb50" InformativeScreenshot="316c8349bafa73ba0cc1b7a8849cb022.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ejecutar busqueda'" sap:VirtualizedContainerService.HintSize="1016,189" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable CvElementArea="362, 547, 130, 26" CvTextArea="387, 553, 100, 14" CvTextArgument="Ejecutar busqueda" CvType="Button" DesignTimeRectangle="362, 547, 130, 26" DesignTimeScaleFactor="1" ElementType="Button" Guid="88ec3ff1-ed3c-42ac-a12c-61fe69735c65" InformativeScreenshot="66ee9827bf9501a80a3a810584d5ea78.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1016,50" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Extrayendo datos para &quot; + in_country]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="-8, -8, 1936, 1048" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARMSURBVFhHzZf7b5NVHMb3X3nBC/EWY0z8BaMQlR/8RRPRHyS4IWAIRKcONeAERnTZwpDRwTbGuuHajc2Cy7pR6NZt0Bu93+/XXcjjeY5760tdS1kHs8mTNu/lfJ7z/T7nvH0b+Imm8ruTueVMKr+CRHbpsYoMssiU8JT4kV26L0+sd8PjEFmSSRPxTDH/JOGKyCS7YSvgishuWO/Ek9T/10A6vyyVFL+zhRXkiqtM77rX1qP/GCA0v7SKOVcMi94EDnXdwIGzNzA47UQgkRd921wTJQMcmGCrP4lveoxSrdrbeO6Lbqln9p3H3vYJJrdiJTgGK8Vx+J0RleOxapWTBlhmgk8Nm7Hr2BA+PqnHnxY/3jzSL8HPN13AC0JP7f0dPw/ekgPzvpQYOFtcQUEACbIHU9CbPbj0lw1XTS5M28KwBVIIisrRhGKOLS0ZIDycLGB8zouJOZ+8gSdiYqZGawjHB0z4SBj65PQYPjtzDY0dBrgjGTHIqvw2zPtxengWn7aN4a2j/dIoK0bTLx/sEZPow84WrZjUKJo6r6Olbwa6W24kxPjSgOKEs6IzdY95rLh8X5pq11nQObog1aG3wDhnx56TI9jWuAYU39u/1OClAz0lbRd6cb9GVpHXvP+DFm1DJpjtfgRjaYjtuPIqUMRQsj2vfXWpNBBb0fSrDt06o4D+A1KDKYK3NXbjjcO92N8xgWGjFe5AFJG4aEk0hUA0jVA883ADFCvx+W8TckA14PzINI50jcsq8BiNKHnZ+f0VnOg3wjjvgj8URSAchzcUhy+cEPCUhEeSudoMMDhd44ty9moDbzdfxuiUBe9+N4Cn93XjlYMXseeUDhfGzFh0+OAPRuAJROTMPcFYCc7yhxPZ2lpAZcSezX3h1UMXZckVE5z54bPjGLg+i6PnDNAb78Dh8sPjC+KeV8gXhssvTKzB/ZHkA/BYulCbASojsvC1ZgrPllWBs1+0u+By++B0+WAXBpweGghVhLP0hHPcmg1wzYeSeblHKFmggV2i1zfnHbA6vRLucAcegLPvClzpuwKnajZAMYx3fUns+PaKDBoNvHdMi6HJBVhsHjjX4Cw9+67A1aFj6bmbKmM+kgGKu5lhwS+XJRP/gVjb5/S3YbTcg0sFV4eOcKXvajj1yAYorgqNwSpXxe4fh3BGO4OrU3fhFYlX97088erSK9qQAYrPgJbeGbwjMtB62YhOnVms9dhDQ1euDRtgKCOpAloHTfipdwrNmkmEoomKoSsvvaING6BoIpNfQpvWJB5WerHFJsTsq4euXHUZoPgobtfNYkfzAFyBmNznq4WuXHUbyAkDfZM2uQ2bHUFEEv/CK/VdrboN8GnJv26vi2X5x00nEul81dCVq24DFLPw4YkR/CL+LaVzxaqhK9emvJhwh7w26xV7wx2kssWa4fLFRFy8Ka9mNJEU8Fi6djjZW/9yyo9I7Ba9njc0/A2ubZVs280dJwAAAABJRU5ErkJggg==" InformativeScreenshot="bba9e202faadf7f366de31ba7927d524.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" Title="P10 (1) 200 SAP Credit Management" />
+                    </uix:NApplicationCard.TargetApp>
+                  </uix:NApplicationCard>
                 </Sequence>
-                <uix:NCheckState DisplayName="Check App State 'SAPGUI.GridViewCtrl.1'" sap:VirtualizedContainerService.HintSize="1078,643" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
+                <uix:NCheckState DisplayName="Check App State 'SAPGUI.GridViewCtrl.1'" sap:VirtualizedContainerService.HintSize="1174,643" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="1696764a-cc40-4b9b-a862-0f592982b5e1" Version="V3">
                   <uix:NCheckState.IfExists>
                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,401" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="x:String" Name="FilePath" />
-                      </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -374,6 +895,12 @@
                   <uix:NCheckState.Target>
                     <uix:TargetAnchorable DesignTimeRectangle="645, 585, 1264, 385" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[1]/shell' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd ctrlname='SapguiWrapper' /&gt;&lt;wnd cls='SAP_FRONTEND_EMBEDDED' title='P10(1)/200 SAP Credit Management' /&gt;&lt;sap id='usr/cntlCLFRM_CONTAINER/shellcont/shell/shellcont[1]/shell/shellcont[1]/shell' check:text='SAPGUI.GridViewCtrl.1' /&gt;" Guid="bee87017-88ad-41fd-9a35-19df4ff27b31" InformativeScreenshot="7cc0635e2b294b404818c06ac35b7edb.png" ScopeSelectorArgument="&lt;wnd app='nwbc.exe' cls='HwndWrapper*' title='P10 (1) 200 SAP Credit Management' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                   </uix:NCheckState.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </uix:NCheckState>
               </Sequence>
             </ActivityAction>
@@ -390,7 +917,7 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1178,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1274,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -406,6 +933,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1212,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;----- Finalizando secuencia TransaccionUKM_CASE -----&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1308,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;----- Finalizando secuencia TransaccionUKM_CASE -----&quot;]" />
   </Sequence>
 </Activity>

@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1793,3770</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,4207</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DescargaFicheroSP_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,7 +119,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DescargaFicheroSP" sap:VirtualizedContainerService.HintSize="1270,3585" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DescargaFicheroSP" sap:VirtualizedContainerService.HintSize="1270,4142" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="LC_FilePath" />
       <Variable x:TypeArguments="si:FileInfo" Name="LC_File" />
@@ -129,18 +129,56 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: ES + PT Iberican_FCI - 2. Límites de Crédito - Todos los documentos" sap:VirtualizedContainerService.HintSize="1208,3392" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="b722d741-ac07-4359-bab5-f43bca054e6d" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: ES + PT Iberican_FCI - 2. Límites de Crédito - Todos los documentos" sap:VirtualizedContainerService.HintSize="1208,3949" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="b722d741-ac07-4359-bab5-f43bca054e6d" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1174,3143" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1174,3700" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Selección de la cuenta'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1112,557" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="b722d741-ac07-4359-bab5-f43bca054e6d" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,308" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ES/FIT-rpa rpa1,'" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b722d741-ac07-4359-bab5-f43bca054e6d" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/702ed1df-fbf3-42e7-a14d-db80a314e632/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&amp;response_mode=form_post&amp;response_type=code+id_token&amp;resource=00000003-0000-0ff1-ce00-000000000000&amp;scope=openid&amp;nonce=523E7BF62D4DA0505FD688010ECFF6C4F0E427D9C519AA95-B4772DA976FFDAE3CF79B50FE38BD1608E3963CBCEBFCE6F22536EC941B1B4F9&amp;redirect_uri=https%3a%2f%2fstihlgroup.sharepoint.com%2f_forms%2fdefault.aspx&amp;state=OD0w&amp;claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&amp;wsucxt=1&amp;cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&amp;client-request-id=89336aa1-b0cb-a000-96dc-302e2d6030a5&amp;sso_nonce=AwABEgEAAAADAOz_BQD0_7Cz8KYeIy7EXvdkI7d7Yz1tgjJuCKW08vz05_i2NkuadfMV_XzjQz5DHEsdBlIWKGiV0tO0dlnh_oaKSzDp0WQgAA&amp;mscrid=89336aa1-b0cb-a000-96dc-302e2d6030a5" DesignTimeRectangle="852, 405, 280, 32" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='tilesHolder' tag='DIV' aaname='ES/FIT-rpa rpa1, Robotic Process Automation' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tilesHolder' tag='DIV' aaname='ES/FIT-rpa rpa1, Robotic Process Automation' type='' class='' check:text='ES/FIT-rpa rpa1, Robotic Process Automation' /&gt;" Guid="5f50746c-28bc-441d-9151-a34c88e96852" InformativeScreenshot="b10e1d6622f18d3f3e499bba20e8eee1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Iniciar sesión en la cuenta' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/702ed1df-fbf3-42e7-a14d-db80a314e632/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&amp;response_mode=form_post&amp;response_type=code+id_token&amp;resource=00000003-0000-0ff1-ce00-000000000000&amp;scope=openid&amp;nonce=523E7BF62D4DA0505FD688010ECFF6C4F0E427D9C519AA95-B4772DA976FFDAE3CF79B50FE38BD1608E3963CBCEBFCE6F22536EC941B1B4F9&amp;redirect_uri=https%3a%2f%2fstihlgroup.sharepoint.com%2f_forms%2fdefault.aspx&amp;state=OD0w&amp;claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&amp;wsucxt=1&amp;cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&amp;client-request-id=89336aa1-b0cb-a000-96dc-302e2d6030a5&amp;sso_nonce=AwABEgEAAAADAOz_BQD0_7Cz8KYeIy7EXvdkI7d7Yz1tgjJuCKW08vz05_i2NkuadfMV_XzjQz5DHEsdBlIWKGiV0tO0dlnh_oaKSzDp0WQgAA&amp;mscrid=89336aa1-b0cb-a000-96dc-302e2d6030a5" CVScreenId="2bc5b41f-0f7d-41a7-9739-cc6dc0b10399" CvTextArea="791, 357, 242, 21" CvTextArgument="Seleccion de la cuenta" CvType="Text" DesignTimeRectangle="792, 353, 352, 28" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='heading' tag='DIV' aaname='Selección de la cuenta' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='heading' tag='DIV' aaname='Selección de la cuenta' type='' class='' check:text='Selección de la cuenta' /&gt;" Guid="02fc9092-01cc-4e5f-b456-bc195a48eb21" InformativeScreenshot="91a57040453db8cca91d6156bceecc53.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Iniciar sesión en la cuenta' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
             <uix:NCheckState DisplayName="Check App State '2. Límites'" sap:VirtualizedContainerService.HintSize="1112,3053" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b722d741-ac07-4359-bab5-f43bca054e6d" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="608,2811" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -205,7 +243,7 @@
                             <uix:NClick.Target>
                               <uix:TargetAnchorable CVScreenId="d334135f-67bc-498f-bfb9-7d937e58edf7" CvElementArea="155, 69, 159, 35" CvType="InputBox" DesignTimeRectangle="154, 68, 159, 34" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Descargas recientes' role='list' /&gt;&lt;ctrl name='¿Qué quiere hacer con *?' role='list item' /&gt;&lt;ctrl name='Guardar como Más opciones' role='menu button' /&gt;&lt;ctrl name='Guardar como' role='push button' /&gt;&lt;ctrl name='Guardar como' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Descargas recientes' role='list' /&gt;&lt;ctrl name='¿Qué quiere hacer con Clientes con incidencias LC.xlsx?' role='list item' /&gt;&lt;ctrl name='Guardar como Más opciones' role='menu button' /&gt;&lt;ctrl name='Guardar como' role='push button' /&gt;&lt;ctrl name='Guardar como' role='text' automationid='' check:fulltext='Guardar como' /&gt;" Guid="1565e57d-72db-4616-b8e7-aed5d4cac2c5" InformativeScreenshot="3637fb839454eccd94d4d1bc768ab5ef.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_2' idx='*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                     <uix:Target CVScreenId="d334135f-67bc-498f-bfb9-7d937e58edf7" CvElementArea="155, 69, 159, 35" CvType="InputBox" DesignTimeRectangle="155, 70, 119, 32" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Descargas' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Descargas recientes' role='list' /&gt;&lt;ctrl name='¿Qué quiere hacer con Clientes con incidencias LC.xlsx?' role='list item' /&gt;&lt;ctrl name='Guardar como Más opciones' role='menu button' /&gt;&lt;ctrl name='Guardar como' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Descargas' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Descargas recientes' role='list' /&gt;&lt;ctrl name='¿Qué quiere hacer con Clientes con incidencias LC.xlsx?' role='list item' /&gt;&lt;ctrl name='Guardar como Más opciones' role='menu button' /&gt;&lt;ctrl name='Guardar como' role='push button' automationid='' check:fulltext='Guardar como' /&gt;" Guid="f23ac614-1acf-46cd-85bf-e5e3e509ae70" SearchSteps="Selector, FuzzySelector, CV" />
                                   </scg:List>
                                 </uix:TargetAnchorable.Anchors>
