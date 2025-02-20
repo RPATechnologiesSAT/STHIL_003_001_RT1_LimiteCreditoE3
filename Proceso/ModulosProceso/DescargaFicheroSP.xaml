@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1793,4207</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,4247</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DescargaFicheroSP_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,7 +119,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DescargaFicheroSP" sap:VirtualizedContainerService.HintSize="1270,4142" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DescargaFicheroSP" sap:VirtualizedContainerService.HintSize="1270,4182" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="LC_FilePath" />
       <Variable x:TypeArguments="si:FileInfo" Name="LC_File" />
@@ -129,19 +129,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: ES + PT Iberican_FCI - 2. Límites de Crédito - Todos los documentos" sap:VirtualizedContainerService.HintSize="1208,3949" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="b722d741-ac07-4359-bab5-f43bca054e6d" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: ES + PT Iberican_FCI - 2. Límites de Crédito - Todos los documentos" sap:VirtualizedContainerService.HintSize="1208,3989" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="b722d741-ac07-4359-bab5-f43bca054e6d" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1174,3700" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1174,3740" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Selección de la cuenta'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1112,557" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="b722d741-ac07-4359-bab5-f43bca054e6d" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Selección de la cuenta'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1112,597" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="b722d741-ac07-4359-bab5-f43bca054e6d" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,308" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
@@ -241,13 +241,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Abrir'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4974c84-c5f3-4489-807e-70faea8d88c9" Version="V3">
                             <uix:NClick.Target>
-                              <uix:TargetAnchorable CVScreenId="d334135f-67bc-498f-bfb9-7d937e58edf7" CvElementArea="155, 69, 159, 35" CvType="InputBox" DesignTimeRectangle="154, 68, 159, 34" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Descargas recientes' role='list' /&gt;&lt;ctrl name='¿Qué quiere hacer con *?' role='list item' /&gt;&lt;ctrl name='Guardar como Más opciones' role='menu button' /&gt;&lt;ctrl name='Guardar como' role='push button' /&gt;&lt;ctrl name='Guardar como' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Descargas recientes' role='list' /&gt;&lt;ctrl name='¿Qué quiere hacer con Clientes con incidencias LC.xlsx?' role='list item' /&gt;&lt;ctrl name='Guardar como Más opciones' role='menu button' /&gt;&lt;ctrl name='Guardar como' role='push button' /&gt;&lt;ctrl name='Guardar como' role='text' automationid='' check:fulltext='Guardar como' /&gt;" Guid="1565e57d-72db-4616-b8e7-aed5d4cac2c5" InformativeScreenshot="3637fb839454eccd94d4d1bc768ab5ef.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_2' idx='*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target CVScreenId="d334135f-67bc-498f-bfb9-7d937e58edf7" CvElementArea="155, 69, 159, 35" CvType="InputBox" DesignTimeRectangle="155, 70, 119, 32" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Descargas' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Descargas recientes' role='list' /&gt;&lt;ctrl name='¿Qué quiere hacer con Clientes con incidencias LC.xlsx?' role='list item' /&gt;&lt;ctrl name='Guardar como Más opciones' role='menu button' /&gt;&lt;ctrl name='Guardar como' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Descargas' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Descargas recientes' role='list' /&gt;&lt;ctrl name='¿Qué quiere hacer con Clientes con incidencias LC.xlsx?' role='list item' /&gt;&lt;ctrl name='Guardar como Más opciones' role='menu button' /&gt;&lt;ctrl name='Guardar como' role='push button' automationid='' check:fulltext='Guardar como' /&gt;" Guid="f23ac614-1acf-46cd-85bf-e5e3e509ae70" SearchSteps="Selector, FuzzySelector, CV" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
+                              <uix:TargetAnchorable CVScreenId="d334135f-67bc-498f-bfb9-7d937e58edf7" CvElementArea="155, 69, 159, 35" CvType="InputBox" DesignTimeRectangle="109, 77, 116, 22" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Guardar como' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Guardar como' role='push button' automationid='' check:text='Guardar como' /&gt;" Guid="1565e57d-72db-4616-b8e7-aed5d4cac2c5" ImageBase64="" InformativeScreenshot="f32f920e53b7af5ac1ab8ba1a30c608d.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_2' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
                         </Sequence>

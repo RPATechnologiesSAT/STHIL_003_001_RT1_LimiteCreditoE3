@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1793,5855</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,5935</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtraccionExcel_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -455,7 +455,7 @@
                 <uix:TargetAnchorable DesignTimeRectangle="206, 100, 68, 23" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd cls='DirectUIHWND' /&gt;&lt;wnd cls='CtrlNotifySink' idx='7' /&gt;" FuzzySelectorArgument="&lt;wnd cls='DirectUIHWND' /&gt;&lt;wnd cls='CtrlNotifySink' check:fulltext='Sí' /&gt;" Guid="e7548751-a57a-447b-be72-2765944b2fe3" InformativeScreenshot="f6e4f089116bb87d9031367422660d26.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='Confirmar Guardar como' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <Delay Duration="00:00:30" sap:VirtualizedContainerService.HintSize="1218,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <Delay Duration="00:01:00" sap:VirtualizedContainerService.HintSize="1218,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
             <Assign sap:VirtualizedContainerService.HintSize="1218,114" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[out_FilePath]</OutArgument>

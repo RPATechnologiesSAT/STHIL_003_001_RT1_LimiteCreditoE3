@@ -350,7 +350,7 @@
                             <uix:NClick.Target>
                               <uix:TargetAnchorable CVScreenId="a8e47e64-669f-450b-8510-5a50572b997f" CvElementArea="701, 152, 37, 29" CvType="Button" DesignTimeRectangle="703, 153, 35, 27" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;sap id='usr/ssub%_SUBSCREEN_FREESEL:SAPLSSEL:1105/btn%_%%DYN003_%_APP_%-VALU_PUSH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ssub%_SUBSCREEN_FREESEL:SAPLSSEL:1105/btn%_%%DYN003_%_APP_%-VALU_PUSH' /&gt;" Guid="317ae23d-cc69-4fce-b531-181253abe11f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAfCAYAAABkitT1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE/SURBVFhHY/g/iMHQcdzBK8//O9Vs+y8Qufg/R8gCumGQfXZVW8H2IwO440AS8ikrwfTvP/+govQBIPtA9qpnrvm/9cxjqCiS40Ahhu5yegOQ/Vblm6E8JMeBgpbeIYYOQPbzhC+E8pAcB4r7wQCQ3TEyHXfq1uv/4d37oTziAV0dZ1u5BSpCHKCL42CgcM6J/0ppq6A8woBmjgOFEsgcbLh7/SWoKvwApBYG6BJypEQt3RxH9zQHSj8gtbgwLH2tOHyX/rmVUOIm1hxcYNRx5IJRx5ELRh1HLqDYcSC1uDAhxxMCIDNggGTH0RoMPccN6j4Etn4jvcHR6y//m5VsgvKQHAfqL2rnrAUroHcIguwD2aufv/7/uuMPoKJIjgMBkANB/UZQ0ILinl4YZB8oxJAdBgIojhtsYBA77v9/AEGEkX894EyQAAAAAElFTkSuQmCC" InformativeScreenshot="649b78ccc1b724e3f418052ae17c0788.png" ScopeSelectorArgument="&lt;wnd app='sapguiserver.exe' cls='#32770' title='P10(1)/200 Especificar valores p.criterios filtros' idx='*' /&gt;" SearchSteps="Selector, Image" Version="V4" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                     <uix:Target CVScreenId="a8e47e64-669f-450b-8510-5a50572b997f" CvTextArea="208, 159, 109, 13" CvTextArgument="Interloc.comercial:" CvType="Text" DesignTimeRectangle="37, 154, 288, 25" ElementType="Toolbar" FullSelectorArgument="&lt;sap text='Interloc.comercial*' /&gt;" FuzzySelectorArgument="&lt;sap text='Interloc.comercial*' check:text='Interloc.comercial' /&gt;" Guid="e4816a77-d07a-48cb-b1c3-125dcf9d9a88" SearchSteps="Selector" />
                                   </scg:List>
                                 </uix:TargetAnchorable.Anchors>
@@ -632,7 +632,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Consulta'" sap:VirtualizedContainerService.HintSize="1096,557" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="b8bb1b7b-5daa-4150-ad4c-ba95d40784be" Version="V3">
+                                <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Consulta'" sap:VirtualizedContainerService.HintSize="1096,557" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="b8bb1b7b-5daa-4150-ad4c-ba95d40784be" Timeout="180" Version="V3">
                                   <uix:NCheckState.IfExists>
                                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,308" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -692,7 +692,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Visualizar'" sap:VirtualizedContainerService.HintSize="1000,662" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="b8bb1b7b-5daa-4150-ad4c-ba95d40784be" Version="V3">
+                                      <uix:NCheckState DisplayName="Check App State 'P10(1)/200 Visualizar'" sap:VirtualizedContainerService.HintSize="1000,662" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="b8bb1b7b-5daa-4150-ad4c-ba95d40784be" Timeout="180" Version="V3">
                                         <uix:NCheckState.IfExists>
                                           <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,422" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                             <sap:WorkflowViewStateService.ViewState>
