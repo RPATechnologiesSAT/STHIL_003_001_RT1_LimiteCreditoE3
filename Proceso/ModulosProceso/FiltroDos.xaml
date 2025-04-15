@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1793,5101</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1793,6769</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FiltroDos_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -131,14 +131,14 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="778,5036" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <Sequence sap:VirtualizedContainerService.HintSize="858,6704" sap2010:WorkflowViewState.IdRef="Sequence_20">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="716,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;----- Iniciando módulo 'FiltroDos' -----&quot;]" />
-    <Sequence DisplayName="FiltroDos" sap:VirtualizedContainerService.HintSize="716,4611" sap2010:WorkflowViewState.IdRef="Sequence_21">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="796,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;----- Iniciando módulo 'FiltroDos' -----&quot;]" />
+    <Sequence DisplayName="FiltroDos" sap:VirtualizedContainerService.HintSize="796,6279" sap2010:WorkflowViewState.IdRef="Sequence_21">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_FueraRango" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_RangoUno" />
@@ -147,14 +147,17 @@
         <Variable x:TypeArguments="scg:List(x:Int32)" Name="arr_IntervaloMinimo" />
         <Variable x:TypeArguments="x:String" Name="ImporteLimiteMin" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_RangoTres" />
+        <Variable x:TypeArguments="x:String" Name="FicheroFiltroUno" />
+        <Variable x:TypeArguments="x:String" Name="FicheroFiltroDos" />
+        <Variable x:TypeArguments="x:String" Name="FicheroFiltroTres" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="654,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Realizando secuencia etapa 2, envio de correo...&quot;]" />
-      <If Condition="[in_Country.Contains(&quot;ES&quot;)]" sap:VirtualizedContainerService.HintSize="654,1012" sap2010:WorkflowViewState.IdRef="If_1">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="734,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Realizando secuencia etapa 2, envio de correo...&quot;]" />
+      <If Condition="[in_Country.Contains(&quot;ES&quot;)]" sap:VirtualizedContainerService.HintSize="734,1012" sap2010:WorkflowViewState.IdRef="If_1">
         <If.Then>
           <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,421" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
@@ -222,24 +225,24 @@
           </Sequence>
         </If.Else>
       </If>
-      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="654,3111" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="734,4779" sap2010:WorkflowViewState.IdRef="RetryScope_1">
         <ui:RetryScope.ActivityBody>
           <ActivityAction>
-            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="612,2904" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="692,4572" sap2010:WorkflowViewState.IdRef="Sequence_25">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="550,2816" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="630,4484" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="512,2565" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <Sequence sap:VirtualizedContainerService.HintSize="592,4233" sap2010:WorkflowViewState.IdRef="Sequence_30">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="608,1331" sap2010:WorkflowViewState.IdRef="Sequence_31">
                           <sap:WorkflowViewStateService.ViewState>
@@ -344,7 +347,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <Sequence sap:VirtualizedContainerService.HintSize="450,1641" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence sap:VirtualizedContainerService.HintSize="530,1641" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -355,9 +358,7 @@
                       <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[dt_FueraRango]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="388,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Data" WorkbookPath="[in_FilePath]" />
                       <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Crear una lista para rastrear nombres de columnas únicos&#xA;Dim columnList As New List(Of String)&#xA;&#xA;' Iterar sobre las columnas del DataTable para asignar nombres basados en la primera fila&#xA;For i As Integer = 0 To dt.Columns.Count - 1&#xA;    Dim originalName As String = dt.Rows(0)(i).ToString().Trim()&#xA;    Dim newName As String = originalName&#xA;    &#xA;    ' Si el nombre ya existe, asignar un sufijo único&#xA;    Dim counter As Integer = 1&#xA;    While columnList.Contains(newName)&#xA;        newName = originalName &amp; &quot; &quot; &amp; counter&#xA;        counter += 1&#xA;    End While&#xA;    &#xA;    ' Asignar el nuevo nombre único&#xA;    dt.Columns(i).ColumnName = newName&#xA;    columnList.Add(newName)&#xA;Next&#xA;&#xA;' Eliminar la primera fila, ya que se utilizó para los nombres de las columnas&#xA;dt.Rows.RemoveAt(0)&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="388,197" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
                         <ui:InvokeCode.Arguments>
-                          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt">
-                            <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_FueraRango" />
-                          </InOutArgument>
+                          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt">[dt_FueraRango]</InOutArgument>
                         </ui:InvokeCode.Arguments>
                       </ui:InvokeCode>
                       <ui:WriteRange AddHeaders="True" DataTable="[dt_FueraRango]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,148" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="Data" StartingCell="A1" WorkbookPath="[in_FilePath]" />
@@ -452,7 +453,7 @@
                         </ui:FilterDataTable.SelectColumns>
                       </ui:FilterDataTable>
                     </Sequence>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_33">
                           <sap:WorkflowViewStateService.ViewState>
@@ -474,8 +475,46 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_RangoUno]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\FranjaUno-UKM_CASE.xlsx" />
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                    <If Condition="[dt_RangoUno.Rows.Count &lt;&gt; 0]" sap:VirtualizedContainerService.HintSize="530,704" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,341" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_RangoUno]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\FranjaUno-UKM_CASE.xlsx" />
+                          <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_7">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[FicheroFiltroUno]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">["Data\TempExcelExport\FranjaUno-UKM_CASE.xlsx"]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[FicheroFiltroUno]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,276.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
                           <sap:WorkflowViewStateService.ViewState>
@@ -497,8 +536,46 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_RangoDos]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\FranjaDos-UKM_CASE.xlsx" />
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                    <If Condition="[dt_RangoDos.Rows.Count &lt;&gt; 0]" sap:VirtualizedContainerService.HintSize="530,704" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,341" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_RangoDos]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\FranjaDos-UKM_CASE.xlsx" />
+                          <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_9">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[FicheroFiltroDos]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">Data\TempExcelExport\FranjaDos-UKM_CASE.xlsx</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_10">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[FicheroFiltroDos]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,276.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
                           <sap:WorkflowViewStateService.ViewState>
@@ -520,12 +597,50 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_RangoTres]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\FranjaTres-UKM_CASE.xlsx" />
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Excel de cada rango creado correctamente.&quot;]" />
+                    <If Condition="[dt_RangoTres.Rows.Count &lt;&gt; 0]" sap:VirtualizedContainerService.HintSize="530,704" sap2010:WorkflowViewState.IdRef="If_4">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,341" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_RangoTres]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Sheet1" WorkbookPath="Data\TempExcelExport\FranjaTres-UKM_CASE.xlsx" />
+                          <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_11">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[FicheroFiltroTres]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">Data\TempExcelExport\FranjaTres-UKM_CASE.xlsx</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_12">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[FicheroFiltroTres]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Excel de cada rango creado correctamente.&quot;]" />
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="516,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="596,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -554,14 +669,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:RetryScope>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SendEmail - Invoke Workflow File (Proceso\ModulosProceso\SendEmail.xaml)" sap:VirtualizedContainerService.HintSize="654,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Proceso\ModulosProceso\SendEmail.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SendEmail - Invoke Workflow File (Proceso\ModulosProceso\SendEmail.xaml)" sap:VirtualizedContainerService.HintSize="734,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Proceso\ModulosProceso\SendEmail.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_DestinatarioFiltroUno">[If(in_Country.Contains("ES"), in_Config("DestinatarioSPUno").ToString, in_Config("DestinatarioPTUno").ToString)]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_DestinatarioFiltroDos">[in_Config("DestinatarioDos").ToString]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_DestinatarioFiltroTres">[If(in_Country.Contains("ES"), in_Config("DestinatarioSPTres").ToString, in_Config("DestinatarioPTTres").ToString)]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_FicheroFiltroUno">Data\TempExcelExport\FranjaUno-UKM_CASE.xlsx</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_FicheroFiltroDos">Data\TempExcelExport\FranjaDos-UKM_CASE.xlsx</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_FicheroFiltroTres">Data\TempExcelExport\FranjaTres-UKM_CASE.xlsx</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_FicheroFiltroUno">[FicheroFiltroUno]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_FicheroFiltroDos">[FicheroFiltroDos]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_FicheroFiltroTres">[FicheroFiltroTres]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_NombreProyecto">Pedidos bloqueados a autorizar</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_MensajeBody" xml:space="preserve">Buenos días,
 &lt;br&gt;&lt;br&gt;
@@ -571,6 +686,6 @@ Gracias y un saludo,</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="716,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;----- Finalizando módulo 'FiltroDos' -----&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="796,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;----- Finalizando módulo 'FiltroDos' -----&quot;]" />
   </Sequence>
 </Activity>
